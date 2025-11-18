@@ -124,6 +124,7 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
             methods.reset(restaurante);
         }
     }, [restaurante, methods]);*/
+    
     return (
         <div className="formulario">
             <h1 className="  text-[clamp(1.5rem,14vw,10rem)] leading-none tracking-tight font-bold">{esEdicion ? 'Editar Restaurante' : 'Nuevo Restaurante'}</h1>

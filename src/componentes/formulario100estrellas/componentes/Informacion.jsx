@@ -52,14 +52,18 @@ const Informacion = ({ nombreRestaurante }) => {
   ];
   return (
     <div className="info">
-      <fieldset>
-        <legend>Información importante *</legend>
+      <legend>Información importante *</legend>
+      <fieldset className="grid grid-cols-3 gap-x-5">
         {informacion.map((info) => (
-          <div key={info.value} className="input-group">
+          <div
+            key={info.value}
+            className="input-group flex flex-col justify-center"
+          >
             <label htmlFor={info.value}>{info.label}</label>
             <input
               id={info.value}
               type={info.type || "text"}
+              min={info.type === "number" ? 0 : undefined}
               maxLength={info.maxLength}
               {...register(info.value, {
                 pattern: info.pattern,
@@ -67,6 +71,14 @@ const Informacion = ({ nombreRestaurante }) => {
               })}
               placeholder={info.placeholder}
               className={errors[info.value] ? "error-border" : ""}
+              onKeyDown={(e) => {
+                if (
+                  info.type === "number" &&
+                  (e.key === "ArrowUp" || e.key === "ArrowDown")
+                ) {
+                  e.preventDefault();
+                }
+              }}
             />
             {errors[info.value]?.type === "maxLength" && (
               <p className="error">

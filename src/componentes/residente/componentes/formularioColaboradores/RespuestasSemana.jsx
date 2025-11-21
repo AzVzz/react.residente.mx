@@ -6,10 +6,6 @@ import Button from '@mui/material/Button';
 import Autocomplete from '@mui/material/Autocomplete';
 import { getPreguntaActual, getConsejerosNombres, postRespuestaSemana } from "../../../api/temaSemanaApi";
 import { FiUpload } from "react-icons/fi";
-import DirectorioVertical from "../componentesColumna2/DirectorioVertical";
-import PortadaRevista from "../componentesColumna2/PortadaRevista";
-import BotonesAnunciateSuscribirme from "../componentesColumna1/BotonesAnunciateSuscribirme";
-import Infografia from "../componentesColumna1/Infografia";
 import { styled } from '@mui/material/styles';
 
 const StyledTextField = styled(TextField)({
@@ -284,15 +280,6 @@ const RespuestasSemana = () => {
                         </Button>
                         {mensaje && <Box mt={2} textAlign="center">{mensaje}</Box>}
                     </Box>
-                </div>
-                {/* Columna lateral */}
-                <div className="flex flex-col items-end justify-start gap-10">
-                    <DirectorioVertical />
-                    <PortadaRevista />
-                    <div className="pt-3">
-                        <BotonesAnunciateSuscribirme />
-                    </div>
-                    <Infografia />
                 </div>
             </div>
         </div>

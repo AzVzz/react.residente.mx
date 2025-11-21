@@ -1,19 +1,6 @@
 import DetallePost from './DetallePost';
 import MainLateralPostTarjetas from './componentesColumna2/MainLateralPostTarjetas';
-import BotonesAnunciateSuscribirme from './componentesColumna1/BotonesAnunciateSuscribirme';
-import DirectorioVertical from './componentesColumna2/DirectorioVertical';
 import { urlApi, imgApi } from '../../api/url.js';
-import BarraMarquee from './seccionesCategorias/componentes/BarraMarquee.jsx';
-import CincoNotasRRR from './seccionesCategorias/componentes/CincoNotasRRR.jsx';
-import EnPortada from './componentesColumna2/EnPortada';
-import VideosHorizontal from './componentesColumna2/VideosHorizontal';
-import SeccionesPrincipales from './SeccionesPrincipales';
-import CuponesCarrusel from './seccionesCategorias/componentes/CuponesCarrusel.jsx';
-import PortadaRevista from './componentesColumna2/PortadaRevista.jsx';
-import Infografia from './componentesColumna1/Infografia.jsx';
-import GiveawayDescuentos from "./componentesColumna2/GiveawayDescuentos.jsx";
-
-
 
 const DetalleBannerRevista = ({
     detalleCargando,
@@ -106,8 +93,6 @@ const DetalleBannerRevista = ({
 
                 {/* Columna lateral */}
                 <div className="flex flex-col items-end justify-start gap-10">
-                    <DirectorioVertical />
-                    <PortadaRevista />
                     <MainLateralPostTarjetas
                         notasDestacadas={
                             selectedPost
@@ -120,11 +105,6 @@ const DetalleBannerRevista = ({
                         pasarObjeto={false}
                         cantidadNotas={5}
                     />
-                    <div className="mt-4">
-                        <BotonesAnunciateSuscribirme />
-                    </div>
-
-                    {/*<Infografia />*/}
                 </div>
             </div>
 
@@ -151,10 +131,6 @@ const DetalleBannerRevista = ({
 
                     <div className="relative flex justify-center items-center mb-4">
                     </div>
-                    <div className="pb-5">
-                        <CincoNotasRRR tipoNota="Restaurantes" onCardClick={(nota) => handleCardClick(nota.id)} />
-                    </div>
-
                 </>
             )}
 

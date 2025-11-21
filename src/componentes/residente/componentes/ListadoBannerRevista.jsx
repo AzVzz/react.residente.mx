@@ -1,26 +1,8 @@
 import React, { useState, useEffect } from "react";
-import BarraMarquee from '../../../componentes/residente/componentes/seccionesCategorias/componentes/BarraMarquee.jsx';
-import PostPrincipal from './componentesColumna2/PostPrincipal';
-import TresTarjetas from './componentesColumna2/TresTarjetas';
-import DirectorioVertical from './componentesColumna2/DirectorioVertical';
 import MainLateralPostTarjetas from './componentesColumna2/MainLateralPostTarjetas';
-import BotonesAnunciateSuscribirme from './componentesColumna1/BotonesAnunciateSuscribirme';
-import CincoNotasRRR from './seccionesCategorias/componentes/CincoNotasRRR.jsx';
-import CincoNotasBuscador from './seccionesCategorias/componentes/CincoNotasBuscador.jsx';
-import CincoInfografiasRRR from './seccionesCategorias/componentes/CincoInfografiasRRR.jsx';
-import EnPortada from './componentesColumna2/EnPortada';
-import VideosHorizontal from './componentesColumna2/VideosHorizontal';
-import SeccionesPrincipales from './SeccionesPrincipales';
 import { urlApi, imgApi } from '../../../componentes/api/url.js';
-import CuponesCarrusel from './seccionesCategorias/componentes/CuponesCarrusel.jsx';
 import { cuponesGet } from '../../../componentes/api/cuponesGet.js';
-import PortadaRevista from "./componentesColumna2/PortadaRevista.jsx";
-import NotasAcervo from "./componentesColumna2/NotasAcervo.jsx";
-import Infografia from "./componentesColumna1/Infografia.jsx";
 import BannerChevrolet from "./BannerChevrolet.jsx";
-import GiveawayDescuentos from "./componentesColumna2/GiveawayDescuentos.jsx";
-import { giveawayDescuentosGet } from '../../../componentes/api/giveawayDescuentosGet.js';
-import Colaboradores from "../../../componentes/residente/componentes/componentesColumna2/Colaboradores"
 
 const ListadoBannerRevista = ({
     tiposNotas,
@@ -38,12 +20,6 @@ const ListadoBannerRevista = ({
         cuponesGet()
             .then(data => setCupones(Array.isArray(data) ? data : []))
             .catch(() => setCupones([]));
-    }, []);
-
-    useEffect(() => {
-        giveawayDescuentosGet()
-            .then(data => setGiveaway(data))
-            .catch(() => setGiveaway(null));
     }, []);
 
     // Configuración para los buscadores de Notas
@@ -138,27 +114,10 @@ const ListadoBannerRevista = ({
                                 <div className="flex flex-col justify-center items-center text-[12px] mb-4 gap-6">
                                     <p className="uppercase">{marqueeTexto}</p>
                                 </div>
-
-                                {postsFiltrados[0] && (
-                                    <PostPrincipal
-                                        post={postsFiltrados[0]}
-                                        onClick={() => handleCardClick(postsFiltrados[0].id)}
-                                    />
-                                )}
-
-                                <TresTarjetas
-                                    posts={postsFiltrados.slice(1, 25)}
-                                    onCardClick={(post) => handleCardClick(post.id)}
-                                    mostrarBanner={mostrarBanner}
-                                    mostrarBannerEnMedio={mostrarBannerEnMedio}
-                                    revistaActual={revistaActual}
-                                />
                             </div>
 
                             {/* Columna lateral */}
                             <div className="flex flex-col items-end justify-start gap-10">
-                                <DirectorioVertical />
-                                <PortadaRevista />
                                 <MainLateralPostTarjetas
                                     notasDestacadas={destacadasFiltradas}
                                     onCardClick={handleCardClick}
@@ -166,10 +125,6 @@ const ListadoBannerRevista = ({
                                     sinFecha
                                     cantidadNotas={5}
                                 />
-                                <div className="pt-3">
-                                    <BotonesAnunciateSuscribirme />
-                                </div>
-                                {/*<Infografia />*/}
                             </div>
                         </div>
                         {tipo === "Restaurantes" && (
@@ -187,79 +142,8 @@ const ListadoBannerRevista = ({
                                         </div>
                                     </div>
                                 </div>
-                                <div className="pb-0">
-                                    <CincoNotasRRR tipoNota="Restaurantes" onCardClick={(nota) => handleCardClick(nota.id)} />
-                                </div>
-                                <EnPortada
-                                    notasResidenteGet={notasResidenteGet}
-                                    onCardClick={(nota) => handleCardClick(nota.id)}
-                                />
                             </>
                         )}
-                        {tipo === "Antojos" && (
-                            <>
-                                {/*<VideosHorizontal />*/}
-                            </>
-                        )}
-                        {tipo === "Food & Drink" && (
-                            <>
-                                <div className="relative flex justify-center items-center mb-8 mt-8">
-                                    <div className="absolute left-0 right-0 top-1/2 border-t-2 border-black opacity-100 z-0" />
-                                    <div className="relative z-10 px-4 bg-[#DDDDDE]">
-                                        <div className="flex flex-row justify-center items-center gap-3">
-                                            <img src="https://residente.mx/fotos/fotos-estaticas/residente-logos/negros/PLATILOS%20ICÓNICOS%20DE%20NL.webp" className="w-full h-6 object-contain" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="pb-5">
-                                    <CincoNotasRRR tipoNota="Food & Drink" onCardClick={(nota) => handleCardClick(nota.id)} />
-                                </div>
-
-                                <div className="pb-5">
-                                    <CincoInfografiasRRR />
-                                </div>
-                                <div className="my-2">
-                                    {/*<SeccionesPrincipales />*/}
-                                    <GiveawayDescuentos cupones={cupones} />
-                                </div>
-                            </>
-                        )}
-
-                        {tipo === "Antojos" && (
-                            <>
-                                {/* cantinas y Taquerias */}
-                                {buscadorConfig.filter(cfg => cfg.tipo === "Antojos").map(cfg => (
-                                    <React.Fragment key={cfg.keyword}>
-                                        <div className="relative flex justify-center items-center mb-2 mt-8">
-                                            <div className="absolute left-0 right-0 top-1/2 border-t-1 border-black opacity-100 z-0" />
-                                            <div className="relative z-10 px-4 bg-[#DDDDDE]">
-                                                <div className="flex flex-row justify-center items-center gap-3">
-                                                    <img src={`https://residente.mx/fotos/fotos-estaticas/residente-logos/negros/${cfg.img}`} className="w-full h-10 object-contain" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="pb-4">
-                                            <CincoNotasBuscador
-                                                keywords={cfg.keyword}
-                                                limit={10}
-                                                onCardClick={(nota) => handleCardClick(nota.id)}
-                                            />
-                                        </div>
-                                    </React.Fragment>
-                                ))}
-                                <div className="mt-2">
-                                    <NotasAcervo onCardClick={(nota) => handleCardClick(nota.id)} />
-                                </div>
-                            </>
-                        )}
-
-                        {/*tipo === "Gastro-Destinos" && (
-                            <div className="my-2">
-                                <GiveawayDescuentos giveaway={giveaway} cupones={cupones} />
-                                <Colaboradores />
-                            </div>
-                        )*/}
-
                     </div>
                 );
             })}

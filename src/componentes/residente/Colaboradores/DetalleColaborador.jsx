@@ -1,10 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getColaboradores, getRespuestasPorColaborador } from "../../api/temaSemanaApi";
-import DirectorioVertical from "../componentes/componentesColumna2/DirectorioVertical";
-import PortadaRevista from "../componentes/componentesColumna2/PortadaRevista";
-import BotonesAnunciateSuscribirme from "../componentes/componentesColumna1/BotonesAnunciateSuscribirme";
-import Infografia from "../componentes/componentesColumna1/Infografia";
 
 const DetalleColaborador = () => {
     const { id } = useParams();
@@ -137,15 +133,6 @@ const DetalleColaborador = () => {
                             ← Volver al listado
                         </button>
                     </div>
-                    </div>
-                    {/* Columna lateral */}
-                    <div className="flex flex-col items-end justify-start gap-10 sticky top-8">
-                        <DirectorioVertical />
-                        <PortadaRevista />
-                        <div className="pt-3">
-                            <BotonesAnunciateSuscribirme />
-                        </div>
-                        <Infografia />
                     </div>
                 </div>
             </div>

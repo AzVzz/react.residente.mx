@@ -1,16 +1,10 @@
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { HiArrowDownTray, HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
-import DirectorioVertical from '../componentes/componentesColumna2/DirectorioVertical';
-import MainLateralPostTarjetas from '../componentes/componentesColumna2/MainLateralPostTarjetas';
-import BotonesAnunciateSuscribirme from '../componentes/componentesColumna1/BotonesAnunciateSuscribirme';
-import PortadaRevista from '../componentes/componentesColumna2/PortadaRevista';
 import InfografiaCard from './InfografiaCard';
 import { useData } from '../../DataContext';
 import { infografiasGet } from '../../api/infografiasGet.js';
 import './InfografiaMain.css';
-import Infografia from '../componentes/componentesColumna1/Infografia';
-import { urlApi, imgApi } from '../../api/url.js';
 
 const InfografiaMain = () => {
   const { revistaActual } = useData();
@@ -152,39 +146,6 @@ const InfografiaMain = () => {
                 );
               })
             )}
-          </div>
-        </div>
-
-
-        {/* Columna lateral */}
-        <div className="flex flex-col items-end justify-start gap-10">
-          <DirectorioVertical />
-          <PortadaRevista />
-          {/*<MainLateralPostTarjetas
-                                    notasDestacadas={destacadasFiltradas}
-                                    onCardClick={handleCardClick}
-                                    sinCategoria
-                                    sinFecha
-                                    cantidadNotas={5}
-                                />*/}
-
-
-          <div className="pt-3">
-            <BotonesAnunciateSuscribirme />
-          </div>
-
-          <Infografia />
-
-          {/*<div className="flex justify-end items-end mb-4">
-                                    <img src="https://i.pinimg.com/originals/4d/ee/83/4dee83472ffd5a8ca24d26a050cf5454.gif"
-                                        className="h-auto w-75" />
-                                </div>*/}
-
-
-
-
-          <div className="pt-3">
-            <BotonesAnunciateSuscribirme />
           </div>
         </div>
       </div>

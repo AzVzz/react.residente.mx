@@ -6,8 +6,6 @@ import Header from './componentes/Header';
 import MegaMenu from './componentes/MegaMenu';
 import { DataProvider } from './componentes/DataContext';
 
-import ListaRestaurantes from './componentes/ednl/ListaRestaurantes';
-import RestaurantePage from './componentes/ednl/RestaurantePage';
 import CulturalAcessForm from './componentes/culturallAccess/CulturalAcessForm';
 import ResidenteMain from './componentes/residente/ResidenteMain';
 import MainSeccionesCategorias from './componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias';
@@ -33,8 +31,6 @@ import DetalleUanl from './componentes/residente/Uanl/DetalleUanl.jsx';
 import ListaNotasUanl from './componentes/residente/componentes/compFormularioMain/ListaNotasUanl.jsx';
 import DetalleColaborador from './componentes/residente/Colaboradores/DetalleColaborador.jsx';
 import NewsletterPage from './componentes/residente/Newsletter/NewsletterPage.jsx';
-import PlantillaNotas from "./componentes/residente/PlantillasRehusables/PlantillaNotas";
-import B2BMain from './componentes/residente/B2B/B2BMain.jsx';
 import ListaTickets from './componentes/residente/componentes/compFormularioMain/ListaTickets';
 
 //Admin
@@ -205,20 +201,7 @@ function App() {
                 </div>
               } />
 
-              {/* Estrellas de Nuevo León */}
-              <Route path="/ednl" element={
-                <div className="max-w-[1080px] mx-auto py-10 sm:px-0">
-                  <ListaRestaurantes />
-                </div>
-              } />
-
               {/* HeyBanco - ahora manejado por la ruta general de clientes */}
-
-              <Route path="/restaurante/:slug" element={
-                <div className="max-w-[680px] mx-auto py-10 sm:px-0">
-                  <RestaurantePage />
-                </div>
-              } />
 
               <Route path="/culturallaccess" element={
                 <div className="max-w-[1080px] mx-auto py-10">
@@ -252,54 +235,24 @@ function App() {
 
 
               {/* Usuario */}
+              {/* No Tocar, Todavia no lo pasamos */}
               <Route path="/colaboradores" element={
                 <RespuestasSemana />
               } />
 
-
-              {/* UANL */}
-              <Route path="/uanl" element={
-                <div className="max-w-[1080px] mx-auto">
-                  <UanlPage />
-                </div>
-              } />
-              <Route path="/uanl/:id" element={
-                <div className="max-w-[1080px] mx-auto">
-                  <DetalleUanl />
-                </div>
-              } />
-
+              {/* No Tocar, Todavia no lo pasamos */}
               <Route path="/colaborador/:id" element={
                 <div className="max-w-[1080px] mx-auto">
                   <DetalleColaborador />
                 </div>
               } />
 
+              {/* No Tocar */}
               <Route path="/foto-news" element={
                 <div className="max-w-[1080px] mx-auto">
                   <NewsletterPage />
                 </div>
               } />
-
-              <Route path="/plantilla" element={
-                <div className="max-w-[1080px] mx-auto">
-                  <PlantillaNotas
-                    posts={[...notasPrueba]}
-                    notasDestacadas={[...notasPrueba]}
-                    handleCardClick={() => { }}
-                  />
-                </div>
-              } />
-
-              <Route path="/b2b" element={
-                <div className="max-w-[1080px] mx-auto">
-                  <B2BMain />
-                </div>
-              } />
-
-
-
-
 
 
 

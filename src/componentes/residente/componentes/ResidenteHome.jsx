@@ -1,17 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import BotonesAnunciateSuscribirme from './componentesColumna1/BotonesAnunciateSuscribirme';
-import TresTarjetas from './componentesColumna2/TresTarjetas';
-import PostPrincipal from './componentesColumna2/PostPrincipal';
 import VideosHorizontal from './componentesColumna2/VideosHorizontal';
 import MainLateralPostTarjetas from './componentesColumna2/MainLateralPostTarjetas';
 import { catalogoNotasGet, notasDestacadasTopGet } from '../../api/notasPublicadasGet';
 import { catalogoTipoNotaGet } from '../../../componentes/api/CatalogoSeccionesGet.js';
-import EnPortada from './componentesColumna2/EnPortada';
 import SeccionesPrincipales from './SeccionesPrincipales';
-import DirectorioVertical from './componentesColumna2/DirectorioVertical';
 import BarraMarquee from './seccionesCategorias/componentes/BarraMarquee.jsx';
-import CincoNotasRRR from './seccionesCategorias/componentes/CincoNotasRRR.jsx';
 import { revistaGetUltima } from '../../api/revistasGet.js';
 import { urlApi, imgApi } from '../../../componentes/api/url.js';
 
@@ -167,13 +161,6 @@ const ResidenteHome = () => {
                                 <div className="w-176.5 mb-3">
                                     <BarraMarquee categoria={marqueeTexto} />
                                 </div>
-
-                                {postsFiltrados[0] && (
-                                    <PostPrincipal
-                                        post={postsFiltrados[0]}
-                                        onClick={() => handleCardClick(postsFiltrados[0].id)}
-                                    />
-                                )}
                                 {revistaActual && revistaActual.pdf ? (
                                     <a href={revistaActual.pdf} target="_blank" rel="noopener noreferrer" download>
                                         <img
@@ -190,17 +177,11 @@ const ResidenteHome = () => {
                                         className="w-full mb-4"
                                     />
                                 )}
-
-                                <TresTarjetas
-                                    posts={postsFiltrados.slice(1, 7)}
-                                    onCardClick={(post) => handleCardClick(post.id)}
-                                />
                             </div>
 
                             {/* Columna lateral */}
                             <div>
                                 <div className="flex flex-col items-end justify-start gap-10">
-                                    <DirectorioVertical />
                                     <MainLateralPostTarjetas
                                         notasDestacadas={destacadasFiltradas}
                                         onCardClick={(post) => handleCardClick(post.id)}
@@ -209,7 +190,6 @@ const ResidenteHome = () => {
                                     />
                                 </div>
                                 <hr className="border-t border-gray-800/80 my-5 border-dotted" />
-                                <BotonesAnunciateSuscribirme />
                                 <hr className="border-t border-gray-800/80 my-5 border-dotted" />
                             </div>
                         </div>
@@ -225,12 +205,6 @@ const ResidenteHome = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="pb-5">
-                                    <CincoNotasRRR tipoNota="Restaurantes" onCardClick={(nota) => handleCardClick(nota.id)} />
-                                </div>
-                                <EnPortada
-                                    onCardClick={(nota) => handleCardClick(nota.id)}
-                                />
                             </>
                         )}
                         {tipo === "Antojos" && (

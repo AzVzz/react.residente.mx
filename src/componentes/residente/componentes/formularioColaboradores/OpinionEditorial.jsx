@@ -5,10 +5,6 @@ import Button from '@mui/material/Button';
 import { FiUpload } from 'react-icons/fi';
 import { styled } from '@mui/material/styles';
 import { consejerosPost } from '../../../api/consejerosApi.js';
-import DirectorioVertical from '../../../residente/componentes/componentesColumna2/DirectorioVertical';
-import Infografia from '../../../residente/componentes/componentesColumna1/Infografia';
-import BotonesAnunciateSuscribirme from '../../../residente/componentes/componentesColumna1/BotonesAnunciateSuscribirme';
-import PortadaRevista from "../componentesColumna2/PortadaRevista";
 
 
 // Input oculto para subir archivos
@@ -457,13 +453,6 @@ const OpinionEditorial = () => {
               </Button>
             </Box>
           </Box>
-        </div>
-        {/* Barra lateral */}
-        <div className="flex flex-col items-end justify-start gap-10">
-          <DirectorioVertical />
-          <PortadaRevista />
-          <BotonesAnunciateSuscribirme />
-          <Infografia />
         </div>
       </div>
     </div>

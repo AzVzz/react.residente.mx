@@ -9,7 +9,6 @@ import { revistaGetUltima } from "../../../../componentes/api/revistasGet";
 import { cuponesGetFiltrados } from '../../../api/cuponesGet';
 import CarruselPosts from '../../../../componentes/residente/componentes/componentesColumna2/CarruselPosts.jsx';
 import TarjetaHorizontalPost from '../../../../componentes/residente/componentes/componentesColumna2/TarjetaHorizontalPost.jsx'
-import DirectorioVertical from '../componentesColumna2/DirectorioVertical.jsx';
 import DetallePost from '../DetallePost.jsx';
 import BarraMarquee from './componentes/BarraMarquee.jsx';
 import ImagenesRestaurantesDestacados from './componentes/ImagenesRestaurantesDestacados.jsx';
@@ -474,7 +473,6 @@ const MainSeccionesCategorias = () => {
                         pasarObjeto={true}
                     />
                         */}
-                    <DirectorioVertical />
                 </div>
             </div>
 

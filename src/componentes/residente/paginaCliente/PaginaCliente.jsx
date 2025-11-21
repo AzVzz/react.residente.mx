@@ -2,14 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { catalogoNotasGet } from "../../api/notasPublicadasGet";
 
-import PostPrincipal from '../componentes/componentesColumna2/PostPrincipal';
-import TresTarjetas from '../componentes/componentesColumna2/TresTarjetas';
-import DirectorioVertical from "../componentes/componentesColumna2/DirectorioVertical.jsx";
-import PortadaRevista from "../componentes/componentesColumna2/PortadaRevista.jsx";
 import MainLateralPostTarjetas from "../componentes/componentesColumna2/MainLateralPostTarjetas.jsx";
-import BotonesAnunciateSuscribirme from "../componentes/componentesColumna1/BotonesAnunciateSuscribirme.jsx";
-import Infografia from "../componentes/componentesColumna1/Infografia.jsx";
-import CincoNotasRRR from "../componentes/seccionesCategorias/componentes/CincoNotasRRR.jsx";
 import { urlApi, imgApi } from "../../api/url.js";
 
 const PaginaCliente = () => {
@@ -158,24 +151,6 @@ const PaginaCliente = () => {
                         <div className="flex flex-col justify-center items-center text-[15px] mb-4 gap-0 ">
                             <p className="uppercase"></p>
                         </div>
-
-                        {primeraNota && (
-                            <PostPrincipal
-                                post={primeraNota}
-                                onClick={() => handleCardClick(primeraNota)}
-                            />
-                        )}
-
-                        {restoNotas.length > 0 && (
-                            <TresTarjetas
-                                posts={restoNotas}
-                                onCardClick={(post) => handleCardClick(post)}
-                                mostrarBanner={false}
-                                mostrarBannerEnMedio={false}
-                                revistaActual={null}
-                            />
-                        )}
-
                         {notas.length === 0 && !cargando && (
                             <div className="text-center py-12">
                                 <p className="text-gray-500 text-lg">No hay contenido disponible para {clienteDisplayName}</p>
@@ -185,8 +160,6 @@ const PaginaCliente = () => {
 
                     {/* Columna lateral */}
                     <div className="flex flex-col items-end justify-start gap-10">
-                        <DirectorioVertical />
-                        <PortadaRevista />
                         <MainLateralPostTarjetas
                             notasDestacadas={notasTop}
                             onCardClick={handleCardClick}
@@ -195,10 +168,6 @@ const PaginaCliente = () => {
                             sinFecha
                             cantidadNotas={5}
                         />
-                        <div className="pt-3">
-                            <BotonesAnunciateSuscribirme />
-                        </div>
-                        {/* <Infografia /> */}
                     </div>
                 </div>
             </div>
@@ -215,9 +184,6 @@ const PaginaCliente = () => {
                         </span>
                     </div>
                 </div>
-            </div>
-            <div className="pb-0">
-                <CincoNotasRRR tipoNota="Restaurantes" onCardClick={handleCardClick} />
             </div>
         </div>
     );

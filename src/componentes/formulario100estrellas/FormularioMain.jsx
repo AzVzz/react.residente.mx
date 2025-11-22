@@ -1,9 +1,10 @@
 import { useForm, FormProvider } from "react-hook-form";
+import { useParams } from "react-router-dom";
 import RestaurantPoster from "../api/RestaurantPoster";
-import RestaurantFetcher from "../api/RestaurantFetcher";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useAuth } from "../Context";
 import Login from "../Login";
+import { useFormStorage } from "../../hooks/useFormStorage"; // Importar el hook
 
 import "./FormularioMain.css";
 import TipoRestaurante from "./componentes/TipoRestaurante";
@@ -27,6 +28,17 @@ import FotosLugar from "./componentes/FotosLugar";
 import Colaboraciones from "./componentes/Colaboraciones";
 import NuevasSeccionesCategorias from "./componentes/NuevasSeccionesCategorias";
 
+// Helper to get a stable ID for new forms across page reloads
+const getNewFormId = () => {
+  const NEW_FORM_ID_KEY = 'newRestaurantFormId';
+  let formId = localStorage.getItem(NEW_FORM_ID_KEY); // CAMBIADO a localStorage
+  if (!formId) {
+    formId = `nuevo_${Date.now()}`;
+    localStorage.setItem(NEW_FORM_ID_KEY, formId); // CAMBIADO a localStorage
+  }
+  return formId;
+};
+
 // Definir campos de reseñas
 const reseñasFields = [
   "fundadores",
@@ -37,7 +49,13 @@ const reseñasFields = [
 ];
 
 const FormularioMain = ({ restaurante, esEdicion }) => {
+  const { idNegocio } = useParams();
+  const formIdRef = useRef(idNegocio || getNewFormId());
   const { usuario, token } = useAuth();
+  const { loadedData, saveFormData, removeFormData } = useFormStorage(
+    formIdRef.current,
+    { disabled: esEdicion }
+  );
 
   // Si no hay token, muestra el login
   if (!token) {
@@ -128,7 +146,25 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
     baseDefaults.exp_op_empresa = "";
   }
 
-  const methods = useForm({ defaultValues: baseDefaults });
+  const methods = useForm({ defaultValues: baseDefaults, mode: "onChange" });
+  const { watch, reset } = methods;
+
+  // Efecto para resetear el formulario cuando los datos del restaurante (props) cambian.
+  // Esto es crucial para el modo de edición, para poblar el form después de la carga asíncrona.
+  useEffect(() => {
+    if (restaurante) {
+      reset(baseDefaults);
+    }
+  }, [restaurante, reset]);
+
+  // Cargar datos desde el hook de storage cuando esté listo.
+  useEffect(() => {
+    // Solo resetear el form con datos locales si existen (no es un objeto vacío)
+    if (loadedData && Object.keys(loadedData).length > 0) {
+      // Esto sobreescribe los datos iniciales con los cambios locales guardados.
+      reset(loadedData);
+    }
+  }, [loadedData, reset]);
 
   return (
     <div className="formulario">
@@ -354,11 +390,18 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
                       // Enviar al endpoint específico de imágenes
                       await postImages(restaurantId, formData);
                     }
-
-                    //console.log("Proceso completo: datos e imágenes enviados");
+                    
+                    // *** ¡LÓGICA CLAVE AÑADIDA! ***
+                    // Limpiar el storage después de un envío exitoso.
+                    removeFormData();
+                    // Si era un formulario nuevo, limpiar también el ID de sesión.
+                    if (!esEdicion) {
+                      localStorage.removeItem('newRestaurantFormId'); // CAMBIADO a localStorage
+                    }
+                    console.log("Proceso completo: Formulario enviado y borrador local eliminado.");
                   }
                 } catch (error) {
-                  //console.error('Error en el envío:', error);
+                  console.error('Error en el envío:', error);
                 }
               })}
             >

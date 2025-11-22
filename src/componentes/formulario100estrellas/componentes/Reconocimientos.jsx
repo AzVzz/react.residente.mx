@@ -31,6 +31,12 @@ const Reconocimientos = ({ numero }) => {
             validate: (value) => {
                 const reconocimiento = watch(`reconocimiento_${numero}`);
                 if (reconocimiento && !value) return "Ingresa el año del reconocimiento";
+                
+                const currentYear = new Date().getFullYear();
+                if (value > currentYear) {
+                    return `El año no puede ser mayor que ${currentYear}`;
+                }
+
                 return true;
             }
         }

@@ -114,7 +114,7 @@ const PlatilloEstrellaCarrusel = ({ imagenes = [], estrella, nombrePlatillo }) =
           {imagenes.map((img, index) => (
             <div key={index} onClick={() => openModal(index)} style={{ cursor: 'pointer' }}>
               <img
-                src={img ? `${imgApi}${img}` : "/placeholder.svg"}
+                src={img ? (img.startsWith('http') ? img : `${imgApi}${img}`) : "/placeholder.svg"}
                 alt={`Slide ${index + 1}`}
                 className="imagen-principal"
               />
@@ -185,7 +185,7 @@ const PlatilloEstrellaCarrusel = ({ imagenes = [], estrella, nombrePlatillo }) =
                 <div key={`modal-${index}`} className="flex items-center justify-center h-full">
                   <div className="flex items-center justify-center w-full h-full">
                     <img
-                      src={img ? `${urlApi}${img}` : "/placeholder.svg"}
+                      src={img ? (img.startsWith('http') ? img : `${urlApi}${img}`) : "/placeholder.svg"}
                       alt={`Platillo ampliado ${index + 1}`}
                       className="max-w-full max-h-full object-contain"
                     />

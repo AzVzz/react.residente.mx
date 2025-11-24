@@ -1,7 +1,7 @@
 import { useForm, FormProvider } from "react-hook-form";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import RestaurantPoster from "../api/RestaurantPoster";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import { useAuth } from "../Context";
 import Login from "../Login";
 import { useFormStorage } from "../../hooks/useFormStorage"; // Importar el hook
@@ -50,11 +50,17 @@ const reseñasFields = [
 
 const FormularioMain = ({ restaurante, esEdicion }) => {
   const { idNegocio } = useParams();
-  const formIdRef = useRef(idNegocio || getNewFormId());
+  const navigate = useNavigate();
+
+  // Usar useMemo para que el ID cambie si cambia el idNegocio (navegación)
+  const formId = useMemo(() => {
+    return idNegocio || getNewFormId();
+  }, [idNegocio]);
+
   const { usuario, token } = useAuth();
   const { loadedData, saveFormData, removeFormData } = useFormStorage(
-    formIdRef.current,
-    { disabled: esEdicion }
+    formId,
+    { disabled: false } // Habilitado siempre para auto-guardado
   );
 
   // Si no hay token, muestra el login
@@ -146,6 +152,15 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
     baseDefaults.exp_op_empresa = "";
   }
 
+  // Inicializar ocasiones ideales
+  if (restaurante?.ocasiones_ideales && Array.isArray(restaurante.ocasiones_ideales)) {
+    restaurante.ocasiones_ideales.forEach((ocasion, index) => {
+      if (index < 3) {
+        baseDefaults[`ocasion_ideal_${index + 1}`] = ocasion;
+      }
+    });
+  }
+
   const methods = useForm({ defaultValues: baseDefaults, mode: "onChange" });
   const { watch, reset } = methods;
 
@@ -165,6 +180,14 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
       reset(loadedData);
     }
   }, [loadedData, reset]);
+
+  // Auto-guardado: Suscribirse a cambios en el formulario
+  useEffect(() => {
+    const subscription = watch((value) => {
+      saveFormData(value);
+    });
+    return () => subscription.unsubscribe();
+  }, [watch, saveFormData]);
 
   return (
     <div className="formulario">
@@ -202,9 +225,9 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
                     fecha_inauguracion: data.fecha_inauguracion,
                     comida: data.comida
                       ? data.comida
-                          .split(",")
-                          .map((item) => item.trim())
-                          .filter(Boolean)
+                        .split(",")
+                        .map((item) => item.trim())
+                        .filter(Boolean)
                       : [],
                     telefono: data.telefono,
                     ticket_promedio: data.ticket_promedio,
@@ -390,7 +413,7 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
                       // Enviar al endpoint específico de imágenes
                       await postImages(restaurantId, formData);
                     }
-                    
+
                     // *** ¡LÓGICA CLAVE AÑADIDA! ***
                     // Limpiar el storage después de un envío exitoso.
                     removeFormData();
@@ -399,6 +422,12 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
                       localStorage.removeItem('newRestaurantFormId'); // CAMBIADO a localStorage
                     }
                     console.log("Proceso completo: Formulario enviado y borrador local eliminado.");
+
+                    // Redirigir a la página del restaurante
+                    const finalSlug = result.data.slug || (esEdicion ? restaurante.slug : null);
+                    if (finalSlug) {
+                      navigate(`/restaurante/${finalSlug}`);
+                    }
                   }
                 } catch (error) {
                   console.error('Error en el envío:', error);

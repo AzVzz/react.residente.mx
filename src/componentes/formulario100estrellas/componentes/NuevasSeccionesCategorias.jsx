@@ -3,7 +3,7 @@ import { useJsonData } from '../../../componentes/api/SeccionesDataFetcher.jsx';
 
 const NuevasSeccionesCategorias = () => {
     const { data, loading, error } = useJsonData();
-    const { register, formState: { errors } } = useFormContext();
+    const { register, formState: { errors }, watch, setValue } = useFormContext();
 
     if (loading) return <p>Cargando opciones...</p>;
     if (error) return <p>Error: {error}</p>;
@@ -28,6 +28,13 @@ const NuevasSeccionesCategorias = () => {
                                             required: `Debes seleccionar una categoría para ${seccion.seccion}`
                                         })}
                                         className="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                                        onClick={() => {
+                                            const fieldName = `secciones_categorias.${seccion.seccion}`;
+                                            const currentVal = watch(fieldName);
+                                            if (currentVal === categoria.nombre) {
+                                                setValue(fieldName, "");
+                                            }
+                                        }}
                                     />
                                     <label
                                         htmlFor={`${seccion.seccion}-${categoria.nombre}`}

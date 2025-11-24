@@ -87,25 +87,6 @@ const Header = () => {
 
       <div className="max-w-[1080px] mx-auto w-full">
 
-        <div className="pt-8">
-          {/*<BannerHorizontal size="big" />*/}
-          {location.pathname === '/heybanco' ? (
-            <a>
-              <img src="https://residente.mx/fotos/fotos-estaticas/BANNER HeyBanco.webp" alt="Banner HeyBanco" />
-            </a>
-          ) : (
-            <a
-              href="https://residente.mx/fotos/fotos-estaticas/HEROESPARAWEB.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleBannerClick}
-            >
-              <img src="https://residente.mx/fotos/fotos-estaticas/BANNER%20HE%CC%81ROES%20DEL%20SERVCIO%20COCA%20COLA%202025.jpg" alt="Banner Principal" />
-            </a>
-          )}
-        </div>
-
-
         <div className="flex pb-0 pt-11"> {/** Antes pt-5 (agregue 8 pixeles más)*/}
           <div className="flex pr-3 ">
             <Link to="" className="h-16 w-16 self-end object-contain bg-white rounded-full">

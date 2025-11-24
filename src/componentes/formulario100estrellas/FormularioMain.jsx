@@ -376,8 +376,7 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
               <Sucursales />
               <CodigoVestir />
               <UbicacionPrincipal />{" "}
-              {/* Ubicación principal - Tipo de comedor */}
-              {/* <ZonasHabilitadas /> */}
+
               {[1, 2, 3, 4, 5].map((num) => (
                 <Reconocimientos key={num} numero={num} />
               ))}

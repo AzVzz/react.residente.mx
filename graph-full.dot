@@ -1,0 +1,1160 @@
+digraph G {
+	graph [bb="0,0,3748.8,4799.5",
+		bgcolor="#111111",
+		layout=dot,
+		overlap=false,
+		pad=0.3,
+		rankdir=LR
+	];
+	node [color="#c6c5fe",
+		fontcolor="#c6c5fe",
+		fontname=Arial,
+		fontsize="14px",
+		height=0,
+		label="\N",
+		shape=box,
+		style=rounded
+	];
+	edge [color="#757575"];
+	"App.jsx"	[height=0.32986,
+		pos="790.12,3270",
+		width=0.83681];
+	"ViewportAdjuster.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="1183,4606",
+		width=1.9097];
+	"App.jsx" -> "ViewportAdjuster.jsx"	[pos="e,1113.9,4609.4 820.73,3269.6 838.08,3271.1 858.81,3276.2 870.5,3291 959.48,3403.3 808.59,4475.4 906.5,4580 932.36,4607.6 1030.8,\
+4611.1 1102.6,4609.7"];
+	"componentes/DataContext.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="3205,4212",
+		width=2.7326];
+	"App.jsx" -> "componentes/DataContext.jsx"	[pos="e,3106.5,4221.6 820.62,3269.7 837.93,3271.2 858.66,3276.4 870.5,3291 972.99,3417.6 807.53,3893.6 906.5,4023 1173.8,4372.3 2675.9,\
+4261.1 3095.3,4222.7"];
+	"componentes/FooterPrincipal.jsx"	[height=0.32986,
+		pos="1183,4400",
+		width=2.9514];
+	"App.jsx" -> "componentes/FooterPrincipal.jsx"	[pos="e,1076.3,4403.9 820.7,3269.6 838.04,3271.1 858.78,3276.3 870.5,3291 945.52,3385.2 823.99,4286.3 906.5,4374 928.13,4397 1000.1,4403.2 \
+1065.1,4403.8"];
+	"componentes/Header.jsx"	[height=0.32986,
+		pos="1841.8,4193",
+		width=2.2951];
+	"App.jsx" -> "componentes/Header.jsx"	[pos="e,1758.7,4193.5 820.55,3269.8 837.83,3271.3 858.56,3276.4 870.5,3291 950.78,3388.7 837.24,3753.2 906.5,3859 1093.2,4144.3 1549.7,\
+4188.1 1747.2,4193.3"];
+	"componentes/Login.jsx"	[height=0.32986,
+		pos="2550.8,2186",
+		width=2.1493];
+	"App.jsx" -> "componentes/Login.jsx"	[pos="e,2472.9,2188.9 791.47,3257.8 794.08,3172.7 813.39,2666.9 906.5,2552 1287.6,2081.8 1622.5,2274.9 2224,2207 2304.2,2197.9 2396.1,\
+2192.4 2461.8,2189.4"];
+	"componentes/MegaMenu.jsx"	[height=0.32986,
+		pos="2550.8,4369",
+		width=2.6493];
+	"App.jsx" -> "componentes/MegaMenu.jsx"	[pos="e,2455,4370.9 820.7,3269.6 838.03,3271.2 858.77,3276.3 870.5,3291 943.28,3382.3 823.25,4259.2 906.5,4341 961.32,4394.9 2088.6,4377.9 \
+2443.7,4371.1"];
+	"componentes/NoEncontrado.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="1183,4774",
+		width=2.8889];
+	"App.jsx" -> "componentes/NoEncontrado.jsx"	[pos="e,1138.3,4786.3 820.75,3269.6 838.1,3271.1 858.84,3276.2 870.5,3291 920.85,3354.8 850.55,4694.1 906.5,4753 962.28,4811.7 1064.3,\
+4802.1 1127.4,4788.8"];
+	"componentes/culturallAccess/CulturalAcessForm.jsx"	[height=0.32986,
+		pos="1183,4320",
+		width=4.5972];
+	"App.jsx" -> "componentes/culturallAccess/CulturalAcessForm.jsx"	[pos="e,1133.2,4332.4 820.69,3269.6 838.02,3271.2 858.76,3276.3 870.5,3291 940.1,3378.1 829.97,4212.9 906.5,4294 960.69,4351.4 1058.9,\
+4345.8 1122.2,4334.5"];
+	"componentes/formulario100estrellas/FormularioMain.jsx"	[height=0.32986,
+		pos="1841.8,1467",
+		width=4.9201];
+	"App.jsx" -> "componentes/formulario100estrellas/FormularioMain.jsx"	[pos="e,1724.2,1454.6 791.11,3257.9 791.12,3145.2 794.89,2276.4 906.5,2047 1064.4,1722.5 1164.5,1631.9 1495.5,1488 1563.3,1458.5 1645.8,\
+1452.5 1713.1,1454.3"];
+	"componentes/formulario100estrellas/FormularioMainPage.jsx"	[height=0.32986,
+		pos="1183,1467",
+		width=5.3576];
+	"App.jsx" -> "componentes/formulario100estrellas/FormularioMainPage.jsx"	[pos="e,1165.7,1479.2 791.02,3257.8 790.09,3132.3 785.92,2070.4 906.5,1783 962.93,1648.5 1099.8,1530.9 1156.6,1486.2"];
+	"componentes/promociones/PromoMain.jsx"	[height=0.32986,
+		pos="2550.8,65.986",
+		width=3.8056];
+	"App.jsx" -> "componentes/promociones/PromoMain.jsx"	[pos="e,2413.5,57.657 791.53,3257.8 798.5,3049.5 892.59,242.85 906.5,227.99 1106.9,13.8 2037,38.527 2402.1,57.069"];
+	"componentes/residente/Colaboradores/DetalleColaborador.jsx"	[height=0.32986,
+		pos="1183,4484",
+		width=5.3993];
+	"App.jsx" -> "componentes/residente/Colaboradores/DetalleColaborador.jsx"	[pos="e,988.14,4487.4 820.71,3269.6 838.06,3271.1 858.79,3276.3 870.5,3291 951.55,3393 816.49,4368.8 906.5,4463 918.3,4475.3 944.85,4482.4 \
+977.02,4486.3"];
+	"componentes/residente/Newsletter/NewsletterPage.jsx"	[height=0.32986,
+		pos="1841.8,2142",
+		width=4.7743];
+	"App.jsx" -> "componentes/residente/Newsletter/NewsletterPage.jsx"	[pos="e,1669.5,2134.8 791.45,3257.8 794.63,3142.6 822,2246.3 906.5,2168 960.16,2118.3 1401.7,2125.7 1658.1,2134.4"];
+	"componentes/residente/componentes/DetallePost.jsx"	[height=0.32986,
+		pos="2550.8,3230",
+		width=4.6597];
+	"App.jsx" -> "componentes/residente/componentes/DetallePost.jsx"	[pos="e,2382.8,3222.7 820.34,3263.3 843.55,3258.3 876.91,3251.8 906.5,3249 1437.3,3198 2069,3211.3 2371.3,3222.2"];
+	"componentes/residente/componentes/compFormularioMain/BotonScroll.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="1183,4732",
+		width=6.5035];
+	"App.jsx" -> "componentes/residente/componentes/compFormularioMain/BotonScroll.jsx"	[pos="e,948.51,4729.6 820.74,3269.6 838.1,3271.1 858.83,3276.2 870.5,3291 919.43,3352.9 852.13,4653.8 906.5,4711 912.92,4717.7 923.73,\
+4722.9 937.46,4726.9"];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx"	[height=0.32986,
+		pos="1841.8,2844",
+		width=7.2535];
+	"App.jsx" -> "componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx"	[pos="e,1807.8,2856.3 816.14,3257.8 839.38,3246.5 875.04,3229.6 906.5,3216 1245.9,3069.2 1663.2,2910.7 1797.2,2860.3"];
+	"componentes/residente/componentes/compFormularioMain/FormNewsletter.jsx"	[height=0.32986,
+		pos="1841.8,751.99",
+		width=6.8681];
+	"App.jsx" -> "componentes/residente/componentes/compFormularioMain/FormNewsletter.jsx"	[pos="e,1594.4,761.08 791.27,3257.8 793.41,3077.5 820.43,953.34 906.5,857.99 928.68,833.42 1462.6,772.28 1495.5,768.99 1523.8,766.16 1553.5,\
+763.79 1583.1,761.82"];
+	"componentes/residente/componentes/compFormularioMain/FormularioRevistaBanner.jsx"	[height=0.32986,
+		pos="1841.8,3392",
+		width=7.6701];
+	"App.jsx" -> "componentes/residente/componentes/compFormularioMain/FormularioRevistaBanner.jsx"	[pos="e,1692.1,3404.3 820.48,3272 836.68,3274.5 856.32,3279.7 870.5,3291 897.28,3312.3 877.52,3340.8 906.5,3359 1031.3,3437.1 1448.3,3421.1 \
+1680.8,3405.1"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx"	[height=0.32986,
+		pos="1183,751.99",
+		width=6.4306];
+	"App.jsx" -> "componentes/residente/componentes/compFormularioMain/ListaNotas.jsx"	[pos="e,953.33,764.23 791.26,3257.8 793.29,3075.1 819.27,897.6 906.5,798.99 917.11,787 929.55,777.32 943.19,769.55"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotasUanl.jsx"	[height=0.32986,
+		pos="1841.8,423.99",
+		width=6.816];
+	"App.jsx" -> "componentes/residente/componentes/compFormularioMain/ListaNotasUanl.jsx"	[pos="e,1758.5,411.63 791.46,3257.9 796.73,3067.1 863.45,683.84 906.5,627.99 1106.3,368.68 1552.7,387.81 1747.1,410.29"];
+	"componentes/residente/componentes/compFormularioMain/ListaTickets.jsx"	[height=0.32986,
+		pos="1841.8,911.99",
+		width=6.5347];
+	"App.jsx" -> "componentes/residente/componentes/compFormularioMain/ListaTickets.jsx"	[pos="e,1736.5,899.63 791.33,3257.7 793.91,3107 821.48,1619 906.5,1446 1060.1,1133.4 1172.7,1059.7 1495.5,928.99 1567.9,899.65 1656,895.76 \
+1725.1,899.02"];
+	"componentes/residente/componentes/compFormularioMain/Videos.jsx"	[height=0.32986,
+		pos="2550.8,3310",
+		width=6.1181];
+	"App.jsx" -> "componentes/residente/componentes/compFormularioMain/Videos.jsx"	[pos="e,2330.2,3319.2 820.34,3276.7 843.55,3281.7 876.91,3288.1 906.5,3291 1408.4,3339.2 2000.4,3329.9 2319,3319.5"];
+	"componentes/residente/componentes/compFormularioMain/VideosDashboard.jsx"	[height=0.32986,
+		pos="1841.8,2091",
+		width=7.0347];
+	"App.jsx" -> "componentes/residente/componentes/compFormularioMain/VideosDashboard.jsx"	[pos="e,1739.1,2078.7 791.4,3257.7 794.2,3139.5 819.04,2205.9 906.5,2124 1022.2,2015.6 1505.3,2053.4 1727.8,2077.4"];
+	"componentes/residente/componentes/compFormularioMain/componentesPrincipales/PreguntasSemanales.jsx"	[height=0.32986,
+		pos="1841.8,3350",
+		width=9.4514];
+	"App.jsx" -> "componentes/residente/componentes/compFormularioMain/componentesPrincipales/PreguntasSemanales.jsx"	[pos="e,1594.8,3362.4 820.68,3274.3 836.19,3277.4 855.12,3282.6 870.5,3291 889.54,3301.4 886.38,3315.8 906.5,3324 1024.7,3371.9 1349.9,\
+3370.8 1583.4,3362.8"];
+	"componentes/residente/componentes/extras/VideoResidente.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="1183,4690",
+		width=5.5868];
+	"App.jsx" -> "componentes/residente/componentes/extras/VideoResidente.jsx"	[pos="e,981.49,4692.8 820.74,3269.6 838.09,3271.1 858.83,3276.2 870.5,3291 918,3351.1 853.72,4613.5 906.5,4669 917.42,4680.5 941.05,4687.4 \
+970.1,4691.4"];
+	"componentes/residente/componentes/formularioColaboradores/OpinionEditorial.jsx"	[height=0.32986,
+		pos="1183,648.99",
+		width=7.1597];
+	"App.jsx" -> "componentes/residente/componentes/formularioColaboradores/OpinionEditorial.jsx"	[pos="e,1026.1,661.35 791.48,3257.8 796.97,3070.4 864.8,784.33 906.5,730.99 933.22,696.81 973.56,676.38 1015.2,664.32"];
+	"componentes/residente/componentes/formularioColaboradores/RespuestasSemana.jsx"	[height=0.32986,
+		pos="1183,4442",
+		width=7.5243];
+	"App.jsx" -> "componentes/residente/componentes/formularioColaboradores/RespuestasSemana.jsx"	[pos="e,918.93,4429.8 820.71,3269.6 838.05,3271.1 858.79,3276.3 870.5,3291 948.7,3389.3 819.66,4330.2 906.5,4421 907.39,4421.9 908.36,\
+4422.8 909.4,4423.7"];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx"	[height=0.32986,
+		pos="1183,2573",
+		width=7.6806];
+	"App.jsx" -> "componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx"	[pos="e,1173.1,2585.2 795.63,3257.7 809.93,3219.4 856.25,3098.4 906.5,3004 993.83,2839.9 1122.6,2655.9 1166.6,2594.4"];
+	"componentes/residente/infografia/InfografiaForm.jsx"	[height=0.32986,
+		pos="1841.8,305.99",
+		width=4.566];
+	"App.jsx" -> "componentes/residente/infografia/InfografiaForm.jsx"	[pos="e,1799.2,293.62 791.51,3257.6 797.85,3054.8 880.53,425.26 906.5,396.99 1140.3,142.51 1627.7,247.15 1788.2,290.6"];
+	"componentes/residente/infografia/InfografiaMain.jsx"	[height=0.32986,
+		pos="2550.8,4566",
+		width=4.5347];
+	"App.jsx" -> "componentes/residente/infografia/InfografiaMain.jsx"	[pos="e,2387,4570.1 820.72,3269.6 838.07,3271.1 858.81,3276.2 870.5,3291 957.24,3400.4 806.94,4449.1 906.5,4547 958.18,4597.8 1963.3,4579.9 \
+2375.6,4570.4"];
+	"componentes/residente/instagram/LinkInBio.jsx"	[height=0.32986,
+		pos="1183,3270",
+		width=4.1701];
+	"App.jsx" -> "componentes/residente/instagram/LinkInBio.jsx"	[pos="e,1032.6,3270 820.5,3270 863.32,3270 945.99,3270 1021.5,3270"];
+	"componentes/residente/paginaCliente/PaginaCliente.jsx"	[height=0.32986,
+		pos="1183,3661",
+		width=4.8785];
+	"App.jsx" -> "componentes/residente/paginaCliente/PaginaCliente.jsx"	[pos="e,1163.2,3648.7 820.51,3271 837.13,3273.1 857.18,3278.3 870.5,3291 908.69,3327.3 878.31,3359.4 906.5,3404 974.64,3511.7 1098.6,3604.3 \
+1154,3642.4"];
+	"hooks/useClientesValidos.js"	[height=0.32986,
+		pos="2550.8,797.99",
+		width=2.5451];
+	"App.jsx" -> "hooks/useClientesValidos.js"	[pos="e,2481.7,810.34 791.27,3257.7 793.44,3079.6 820.32,1029.1 906.5,939.99 935.47,910.03 2125.6,859.42 2188,852.99 2285.8,842.89 2397.6,\
+824.89 2470.7,812.24"];
+	"usePageTracking.js"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="1183,4648",
+		width=1.8681];
+	"App.jsx" -> "usePageTracking.js"	[pos="e,1115.3,4652.7 820.73,3269.6 838.08,3271.1 858.82,3276.2 870.5,3291 962.66,3407.4 804.11,4519.4 906.5,4627 932.72,4654.5 1032.1,\
+4656 1104,4653.1"];
+	"componentes/api/url.js"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="3640.6,2679",
+		width=2.1076];
+	"componentes/FooterPrincipal.jsx" -> "componentes/api/url.js"	[pos="e,3639.6,2691.1 1289.7,4405.4 1731.9,4427.6 3414.5,4506.6 3496.5,4431 3629.9,4308 3639,2902 3639.6,2702.5"];
+	"componentes/Header.jsx" -> "componentes/api/url.js"	[pos="e,3639.5,2691 1924.7,4204.1 2001.8,4213.9 2120.5,4227.6 2224,4233 2294.6,4236.7 3444.3,4280.6 3496.5,4233 3614.9,4124.9 3636.7,2888.3 \
+3639.3,2702.3"];
+	"componentes/SearchResults.jsx"	[height=0.32986,
+		pos="2550.8,4212",
+		width=2.9097];
+	"componentes/Header.jsx" -> "componentes/SearchResults.jsx"	[pos="e,2445.5,4209.2 1924.5,4195.2 2050.1,4198.6 2290.8,4205 2434.1,4208.9"];
+	"componentes/api/CatalogoSeccionesGet.js"	[height=0.32986,
+		pos="3205,2883",
+		width=3.8264];
+	"componentes/Header.jsx" -> "componentes/api/CatalogoSeccionesGet.js"	[pos="e,3066.8,2876.4 1891.5,4205.3 1966,4221 2108.1,4237.7 2188,4162 2269.2,4085.1 2146.1,3993.2 2224,3913 2429.4,3701.5 2683.1,4020.6 \
+2877.5,3799 2940.3,3727.3 2851.7,3014.5 2913.5,2942 2948.3,2901.1 3003,2883.8 3055.6,2877.6"];
+	"componentes/Context.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="3205,2072",
+		width=2.3368];
+	"componentes/Login.jsx" -> "componentes/Context.jsx"	[pos="e,3120.6,2065.1 2628.4,2181.4 2696.5,2174.9 2797.4,2159.3 2877.5,2122 2896.1,2113.3 2894.4,2100.5 2913.5,2093 2975.6,2068.5 3050.8,\
+2063.7 3109.2,2064.8"];
+	"componentes/api/loginPost.js"	[height=0.32986,
+		pos="3205,2274",
+		width=2.6701];
+	"componentes/Login.jsx" -> "componentes/api/loginPost.js"	[pos="e,3108.7,2286 2628.6,2174 2697.8,2166.9 2800.2,2166.2 2877.5,2207 2900.5,2219.1 2890.6,2240.8 2913.5,2253 2969.3,2282.7 3039.8,2288.4 \
+3097.4,2286.5"];
+	"componentes/MegaMenu.jsx" -> "componentes/api/url.js"	[pos="e,3639.6,2691 2646.5,4374.2 2873.8,4385.7 3435.5,4408 3496.5,4351 3622.8,4232.8 3637.9,2895.8 3639.5,2702.3"];
+	"componentes/MegaMenu.jsx" -> "componentes/api/CatalogoSeccionesGet.js"	[pos="e,3066.9,2876.1 2646.3,4357.3 2722.6,4342.4 2825.5,4308.8 2877.5,4233 2958.7,4114.7 2821.1,3051.8 2913.5,2942 2948.1,2900.8 3002.9,\
+2883.4 3055.7,2877.3"];
+	"componentes/MegaMenu.css"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="3205,4410",
+		width=2.7014];
+	"componentes/MegaMenu.jsx" -> "componentes/MegaMenu.css"	[pos="e,3107.4,4403.9 2646.6,4374.9 2766.1,4382.5 2971,4395.3 3096.3,4403.2"];
+	"componentes/culturallAccess/CulturalAcessForm.jsx" -> "componentes/api/url.js"	[pos="e,3639.5,2691.2 1349,4318.5 1871.4,4313.3 3457.4,4294.7 3496.5,4258 3615.3,4146.5 3636.8,2891.4 3639.3,2702.7"];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/Login.jsx"	[pos="e,2472.9,2191 1882.6,1454.6 1954.8,1435 2107.2,1406.6 2188,1488 2293.4,1594.1 2119.6,2052.9 2224,2160 2255.8,2192.7 2376.3,2194.5 \
+2461.4,2191.4"];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/Context.jsx"	[pos="e,3120.7,2077.7 1851.2,1454.8 1887.9,1403 2040.4,1200.4 2224,1131 2291.9,1105.3 2825.2,1080.7 2877.5,1131 2951.2,1201.9 2842.4,1977.5 \
+2913.5,2051 2939.9,2078.3 3035.1,2080.8 3109.5,2078.2"];
+	"componentes/api/RestaurantFetcher.jsx"	[height=0.32986,
+		pos="2550.8,675.99",
+		width=3.5347];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/api/RestaurantFetcher.jsx"	[pos="e,2423,670.16 1855.7,1454.9 1908.2,1405.3 2105.9,1209.8 2188,1004 2213,941.21 2175.3,748.84 2224,701.99 2250.8,676.22 2335.5,670.02 \
+2411.9,670.11"];
+	"componentes/api/RestaurantPoster.jsx"	[height=0.32986,
+		pos="2550.8,1908",
+		width=3.441];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/api/RestaurantPoster.jsx"	[pos="e,2426.8,1916 1883.2,1454.7 1955.2,1435.5 2106,1408.4 2188,1488 2251.9,1550 2160.2,1824.8 2224,1887 2251,1913.3 2338.1,1917.9 2415.5,\
+1916.3"];
+	"componentes/formulario100estrellas/FormularioMain.css"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1362",
+		width=4.9722];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/FormularioMain.css"	[pos="e,2371.3,1368.6 1888.1,1454.6 1959.1,1435.8 2101.2,1400.4 2224,1383 2267.8,1376.8 2315.3,1372.4 2360,1369.3"];
+	"componentes/formulario100estrellas/componentes/Categorias.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1320",
+		width=5.691];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/Categorias.jsx"	[pos="e,2345.4,1325.2 1871.3,1454.8 1933.8,1428.6 2088.2,1367.4 2224,1341 2259.3,1334.1 2297.1,1329.4 2334,1326.1"];
+	"componentes/formulario100estrellas/componentes/CincoRazones.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1278",
+		width=6.0035];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/CincoRazones.jsx"	[pos="e,2334.4,1281.2 1863.3,1454.8 1919.1,1422.4 2078.6,1334.5 2224,1299 2255.7,1291.2 2289.5,1285.9 2323,1282.3"];
+	"componentes/formulario100estrellas/componentes/CodigoVestir.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1698",
+		width=5.8368];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/CodigoVestir.jsx"	[pos="e,2340.2,1704.2 1885.8,1454.6 1957.9,1436.9 2103.6,1413.7 2188,1488 2252.2,1544.5 2159.9,1620.4 2224,1677 2241.6,1692.6 2282.2,1700.3 \
+2328.8,1703.5"];
+	"componentes/formulario100estrellas/componentes/Colaboraciones.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1030",
+		width=6.0868];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/Colaboraciones.jsx"	[pos="e,2449,1017.6 1849.2,1454.7 1880.7,1396.5 2024.8,1146.4 2224,1051 2290.1,1019.3 2372.5,1014.3 2437.9,1017.1"];
+	"componentes/formulario100estrellas/componentes/ExpertosOpinan.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1656",
+		width=6.1389];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/ExpertosOpinan.jsx"	[pos="e,2329.6,1660.9 1887.4,1454.6 1959.6,1437.6 2102.5,1416.6 2188,1488 2239.6,1531.1 2172.4,1591.8 2224,1635 2240.6,1648.9 2276.3,1656.4 \
+2318.3,1660"];
+	"componentes/formulario100estrellas/componentes/FotosLugar.jsx"	[height=0.32986,
+		pos="3205,903.99",
+		width=5.7222];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/FotosLugar.jsx"	[pos="e,3042.6,891.65 1855.7,1454.9 1907.8,1405.2 2104.4,1209.2 2188,1004 2210.8,948.13 2178.6,774.7 2224,734.99 2278.6,687.17 2817.8,\
+693.63 2877.5,734.99 2915,760.94 2879.5,800.63 2913.5,830.99 2946.2,860.23 2989,878.12 3031.5,888.97"];
+	"componentes/formulario100estrellas/componentes/Historia.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1614",
+		width=5.4201];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/Historia.jsx"	[pos="e,2355.4,1619.1 1890.8,1454.6 1963.2,1439.1 2101,1421.8 2188,1488 2227.3,1517.9 2184.8,1563 2224,1593 2244.5,1608.7 2291.8,1615.9 \
+2344.2,1618.6"];
+	"componentes/formulario100estrellas/componentes/Imagenes.jsx"	[height=0.32986,
+		pos="2550.8,1782",
+		width=5.6181];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/Imagenes.jsx"	[pos="e,2348.2,1789.3 1884.3,1454.6 1956.4,1436 2105,1410.6 2188,1488 2277.5,1571.4 2134.6,1677.4 2224,1761 2242.2,1778 2286.5,1785.8 \
+2336.7,1788.7"];
+	"componentes/formulario100estrellas/componentes/Informacion.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1572",
+		width=5.7743];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/Informacion.jsx"	[pos="e,2487.8,1584.4 1901.9,1454.6 1974.9,1442.7 2100.4,1433.5 2188,1488 2215.4,1505 2196.6,1533.9 2224,1551 2299.9,1598.4 2406.2,1595.3 \
+2476.4,1586"];
+	"componentes/formulario100estrellas/componentes/Logros.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1530",
+		width=5.3576];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/Logros.jsx"	[pos="e,2357.6,1532.4 2019,1462 2074.1,1464.5 2134.4,1471.7 2188,1488 2205.7,1493.4 2206.3,1503.6 2224,1509 2262.7,1520.8 2305.2,1527.7 \
+2346.3,1531.4"];
+	"componentes/formulario100estrellas/componentes/NuevasSeccionesCategorias.jsx"	[height=0.32986,
+		pos="2550.8,755.99",
+		width=7.191];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/NuevasSeccionesCategorias.jsx"	[pos="e,2291.4,753.93 1855.5,1454.8 1907.2,1404.9 2101.9,1208.2 2188,1004 2227.7,909.86 2148.5,845.79 2224,776.99 2235,766.97 2255.2,760.17 \
+2280.3,755.71"];
+	"componentes/formulario100estrellas/componentes/OcasionIdeal.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1488",
+		width=5.8889];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/OcasionIdeal.jsx"	[pos="e,2338.3,1481.7 2019.3,1472.2 2112.5,1475 2227.7,1478.4 2326.9,1481.4"];
+	"componentes/formulario100estrellas/componentes/QuePido.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1446",
+		width=5.5243];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/QuePido.jsx"	[pos="e,2351.4,1451.9 2019.3,1461.7 2116.6,1458.9 2238,1455.2 2340,1452.2"];
+	"componentes/formulario100estrellas/componentes/Reconocimientos.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1236",
+		width=6.2326];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/Reconocimientos.jsx"	[pos="e,2326.3,1237.4 1858.7,1454.8 1908.9,1417 2069.9,1302 2224,1257 2253,1248.5 2283.9,1242.7 2314.9,1238.7"];
+	"componentes/formulario100estrellas/componentes/RedesSociales.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1194",
+		width=6.0347];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/RedesSociales.jsx"	[pos="e,2333.3,1192.2 1855.5,1454.7 1901.1,1412.1 2061.2,1269.7 2224,1215 2255,1204.6 2288.6,1197.8 2322,1193.5"];
+	"componentes/formulario100estrellas/componentes/Resenas.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1152",
+		width=5.5243];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/Resenas.jsx"	[pos="e,2351.6,1146.1 1853.3,1454.7 1894.8,1407.6 2052.3,1237.7 2224,1173 2260.4,1159.3 2300.7,1151.4 2340.2,1147.2"];
+	"componentes/formulario100estrellas/componentes/Sucursales.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1866",
+		width=5.7118];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/Sucursales.jsx"	[pos="e,2344.8,1873.5 1883.6,1454.6 1955.8,1435.6 2105.8,1409 2188,1488 2245.5,1543.2 2166.6,1789.6 2224,1845 2241.6,1862 2284.5,1869.9 \
+2333.6,1872.9"];
+	"componentes/formulario100estrellas/componentes/Testimonios.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1824",
+		width=5.7847];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/Testimonios.jsx"	[pos="e,2342.4,1831.3 1883.8,1454.7 1955.9,1435.8 2105.4,1409.7 2188,1488 2290.2,1584.9 2121.9,1705.8 2224,1803 2241.4,1819.6 2283.1,1827.5 \
+2331.1,1830.6"];
+	"componentes/formulario100estrellas/componentes/TipoRestaurante.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1740",
+		width=6.1701];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/TipoRestaurante.jsx"	[pos="e,2328.3,1745.9 1884.9,1454.6 1957.1,1436.4 2104.4,1411.9 2188,1488 2264.8,1557.9 2147.3,1648.9 2224,1719 2239.9,1733.5 2275.2,1741.3 \
+2317,1745"];
+	"componentes/formulario100estrellas/componentes/UbicacionPrincipal.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1404",
+		width=6.3264];
+	"componentes/formulario100estrellas/FormularioMain.jsx" -> "componentes/formulario100estrellas/componentes/UbicacionPrincipal.jsx"	[pos="e,2336.3,1416.4 1943.4,1454.6 2020.2,1445.5 2128.6,1433.3 2224,1425 2256.6,1422.1 2291,1419.5 2324.9,1417.1"];
+	"componentes/formulario100estrellas/FormularioMainPage.jsx" -> "componentes/formulario100estrellas/FormularioMain.jsx"	[pos="e,1664.2,1467 1376.2,1467 1463.4,1467 1566.2,1467 1652.9,1467"];
+	"componentes/formulario100estrellas/FormularioMainPage.jsx" -> "componentes/api/RestaurantFetcher.jsx"	[pos="e,2423.4,668.82 1207.7,1454.7 1262.3,1424.8 1397.2,1343 1459.5,1233 1508.1,1147.1 1424.1,1082.1 1495.5,1014 1719.6,800.02 1965,1148.2 \
+2188,932.99 2264,859.61 2146.2,769.48 2224,697.99 2251.4,672.86 2336.1,667.69 2412.2,668.63"];
+	"componentes/api/restaurantesBasicosGet.js"	[height=0.32986,
+		pos="3205,372.99",
+		width=3.9097];
+	"componentes/promociones/PromoMain.jsx" -> "componentes/api/restaurantesBasicosGet.js"	[pos="e,3063.9,379.06 2598.3,53.612 2668.7,37.968 2802.2,20.925 2877.5,91.986 2962.3,172.05 2828.4,272.24 2913.5,351.99 2934.3,371.47 \
+2993.1,377.87 3052.4,378.92"];
+	"componentes/api/ticketCrearPost.js"	[height=0.32986,
+		pos="3205,330.99",
+		width=3.1806];
+	"componentes/promociones/PromoMain.jsx" -> "componentes/api/ticketCrearPost.js"	[pos="e,3090.2,336.73 2598.9,53.667 2669.3,38.4 2801.6,22.2 2877.5,91.986 2949.8,158.45 2841,243.8 2913.5,309.99 2937.7,332.06 3011.8,\
+337.17 3079.1,336.84"];
+	"componentes/promociones/componentes/FormularioPromo.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="3205,48.986",
+		width=5.4826];
+	"componentes/promociones/PromoMain.jsx" -> "componentes/promociones/componentes/FormularioPromo.jsx"	[pos="e,3007.2,54.116 2688.1,62.433 2777.2,60.111 2895.2,57.034 2996,54.409"];
+	"componentes/promociones/componentes/FormularioPromoExt.jsx"	[height=0.32986,
+		pos="3205,90.986",
+		width=5.7535];
+	"componentes/promociones/PromoMain.jsx" -> "componentes/promociones/componentes/FormularioPromoExt.jsx"	[pos="e,2997.5,83.07 2688.1,71.212 2774.3,74.516 2887.7,78.861 2986.1,82.636"];
+	"componentes/promociones/componentes/TicketPromo.jsx"	[height=0.32986,
+		pos="3205,612.99",
+		width=5.0764];
+	"componentes/promociones/PromoMain.jsx" -> "componentes/promociones/componentes/TicketPromo.jsx"	[pos="e,3070.9,600.65 2688,55.095 2754.6,57.595 2830.3,73.499 2877.5,124.99 2936.4,189.32 2859.3,447.6 2913.5,515.99 2949,560.72 3005.8,\
+585 3059.8,598.1"];
+	"componentes/utils/Iconografia.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="3640.6,168.99",
+		width=3.0035];
+	"componentes/promociones/PromoMain.jsx" -> "componentes/utils/Iconografia.jsx"	[pos="e,3632.2,156.81 2636.6,53.65 2838.6,25.718 3342.3,-35.198 3496.5,27.986 3555.9,52.321 3603.8,114.5 3626.1,147.56"];
+	"componentes/api/temaSemanaApi.js"	[height=0.32986,
+		pos="1841.8,4486",
+		width=3.3056];
+	"componentes/residente/Colaboradores/DetalleColaborador.jsx" -> "componentes/api/temaSemanaApi.js"	[pos="e,1722.3,4485.6 1377.5,4484.6 1484.9,4484.9 1615.7,4485.3 1710.9,4485.6"];
+	"componentes/api/notasPublicadasGet.js"	[height=0.32986,
+		pos="3205,3678",
+		width=3.5868];
+	"componentes/residente/Newsletter/NewsletterPage.jsx" -> "componentes/api/notasPublicadasGet.js"	[pos="e,3188.6,3665.6 1902.6,2154.3 1983.3,2174.5 2124.4,2223 2188,2325 2254.1,2431 2137.1,3359.2 2224,3449 2274.6,3501.3 2807.8,3470 \
+2877.5,3491 3000.9,3528.1 3127.9,3619 3179.8,3658.8"];
+	"componentes/residente/Newsletter/FotoNewsletter.jsx"	[height=0.32986,
+		pos="2550.8,2068",
+		width=4.7014];
+	"componentes/residente/Newsletter/NewsletterPage.jsx" -> "componentes/residente/Newsletter/FotoNewsletter.jsx"	[pos="e,2381,2069.1 2014.1,2139.8 2070.3,2135.8 2132.6,2127.6 2188,2112 2205.2,2107.1 2206.8,2098.8 2224,2094 2270.3,2081.1 2321.6,2073.9 \
+2369.6,2070"];
+	"componentes/residente/componentes/DetallePost.jsx" -> "componentes/api/url.js"	[pos="e,3638.3,2691.3 2718.9,3240.6 2926.8,3244.5 3280.8,3219 3496.5,3026 3596.9,2936.2 3628.5,2765.1 3636.9,2702.6"];
+	"componentes/residente/componentes/DetallePost.jsx" -> "componentes/api/notasPublicadasGet.js"	[pos="e,3163,3665.7 2718.8,3223.1 2776.2,3229.4 2836.3,3247.3 2877.5,3289 2945.3,3357.6 2859.2,3423.3 2913.5,3503 2971.4,3588.1 3085.6,\
+3638.5 3152.3,3662"];
+	"componentes/api/cuponesGet.js"	[height=0.32986,
+		pos="3205,1092",
+		width=2.9201];
+	"componentes/residente/componentes/DetallePost.jsx" -> "componentes/api/cuponesGet.js"	[pos="e,3198.8,1104.1 2718.6,3240.2 2777.4,3234.5 2838.5,3216.3 2877.5,3171 2919.7,3122.1 2902.6,2072.7 2913.5,2009 2976.3,1640.8 3151.1,\
+1216.1 3194.3,1114.6"];
+	"componentes/residente/componentes/DetallePost.jsx" -> "componentes/utils/Iconografia.jsx"	[pos="e,3617.6,181.15 2655.9,3242.4 2729.7,3244.7 2824.6,3233.5 2877.5,3171 2929.6,3109.4 2858,326.49 2913.5,267.99 2958.2,220.89 3433.4,\
+245.04 3496.5,229.99 3536.3,220.49 3579.2,200.84 3607.5,186.4"];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/Login.jsx"	[pos="e,2473.1,2179.8 2036.4,2831.6 2093.6,2818.1 2150.7,2792.9 2188,2747 2263.8,2653.6 2138.9,2291.9 2224,2207 2256.3,2174.8 2376.6,2174.8 \
+2461.6,2179.2"];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/residente/componentes/DetallePost.jsx"	[pos="e,2382.9,3219 1857.9,2856.1 1906.6,2895.5 2063.9,3023.4 2188,3136 2204.5,3151 2204.2,3160.8 2224,3171 2269.1,3194.2 2321.9,3208.4 \
+2371.7,3217.1"];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/Context.jsx"	[pos="e,3120.7,2066.9 2002.9,2831.7 2067.5,2819.1 2138.4,2794.5 2188,2747 2225.1,2711.4 2189.9,2675.5 2224,2637 2436.6,2397.4 2685.7,2589.5 \
+2877.5,2333 2942.1,2246.6 2834.4,2166.3 2913.5,2093 2941.2,2067.3 3035.7,2064.5 3109.5,2066.5"];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/api/CatalogoSeccionesGet.js"	[pos="e,3067,2884 1932.3,2856.4 2009.4,2866.4 2123.8,2879.6 2224,2885 2514,2900.5 2587.1,2885.9 2877.5,2885 2935.7,2884.8 2999.7,2884.5 \
+3055.6,2884.1"];
+	"componentes/api/notaCrearPostPut.js"	[height=0.32986,
+		pos="3205,2799",
+		width=3.3889];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/api/notaCrearPostPut.js"	[pos="e,3082.9,2803 2103.2,2835.4 2392.4,2825.8 2848,2810.8 3071.4,2803.4"];
+	"componentes/api/notaDelete.js"	[height=0.32986,
+		pos="2550.8,2312",
+		width=2.8056];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/api/notaDelete.js"	[pos="e,2529.1,2324.2 2012.9,2831.6 2075.5,2818.8 2142.2,2794.1 2188,2747 2233.7,2700 2190.1,2660.1 2224,2604 2301.9,2475 2454.7,2370.6 \
+2519.5,2330.1"];
+	"componentes/api/notasCompletasGet.js"	[height=0.32986,
+		pos="2550.8,473.99",
+		width=3.5764];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/api/notasCompletasGet.js"	[pos="e,2421.8,465.17 2042.3,2831.7 2098,2817.9 2152.9,2792.6 2188,2747 2264.4,2647.9 2137.7,585.58 2224,494.99 2249.6,468.15 2334.1,463.26 \
+2410.6,464.89"];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/promociones/componentes/FormularioPromoExt.jsx"	[pos="e,2997.6,87.811 2042.4,2831.7 2098.1,2817.9 2152.9,2792.6 2188,2747 2269.9,2640.6 2131.2,427.93 2224,330.99 2324.6,225.93 2767.8,\
+388.55 2877.5,292.99 2939.7,238.81 2851.6,165.49 2913.5,110.99 2926.6,99.466 2953.7,92.7 2986.3,88.964"];
+	"componentes/residente/componentes/compFormularioMain/componentes/AlertaNota.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,2944",
+		width=7.6181];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/residente/componentes/compFormularioMain/componentes/AlertaNota.jsx"	[pos="e,2350.4,2931.6 1896.1,2856.3 1969.5,2872.8 2106.1,2901.9 2224,2918 2261.1,2923.1 2300.7,2927.2 2339.1,2930.6"];
+	"componentes/residente/componentes/compFormularioMain/componentes/Autor.jsx"	[height=0.32986,
+		pos="2550.8,2270",
+		width=7.1701];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/residente/componentes/compFormularioMain/componentes/Autor.jsx"	[pos="e,2292.5,2266.8 2034.7,2831.7 2092.3,2818.2 2150.2,2793 2188,2747 2252.5,2668.5 2151.6,2362.3 2224,2291 2234.8,2280.3 2255.4,2273.2 \
+2281.1,2268.6"];
+	"componentes/residente/componentes/compFormularioMain/componentes/BotonSubmitNota.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,3150",
+		width=8.2118];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/residente/componentes/compFormularioMain/componentes/BotonSubmitNota.jsx"	[pos="e,2254.7,3139.8 1860.3,2856.2 1911.7,2892.1 2065.8,3000.6 2188,3098 2204.5,3111.1 2204.5,3121 2224,3129 2230.5,3131.7 2237.2,3134.1 \
+2244,3136.4"];
+	"componentes/residente/componentes/compFormularioMain/componentes/CategoriasTipoNotaSelector.jsx"	[height=0.32986,
+		pos="2550.8,2228",
+		width=9.0764];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/residente/componentes/compFormularioMain/componentes/CategoriasTipoNotaSelector.jsx"	[pos="e,2236.1,2240.3 2035.8,2831.6 2093.1,2818.1 2150.5,2792.9 2188,2747 2258.2,2661 2145.2,2327.1 2224,2249 2224.8,2248.2 2225.7,2247.4 \
+2226.6,2246.7"];
+	"componentes/residente/componentes/compFormularioMain/componentes/Contenido.jsx"	[height=0.32986,
+		pos="3205,3005",
+		width=7.5868];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/residente/componentes/compFormularioMain/componentes/Contenido.jsx"	[pos="e,2931.5,3002 1872.2,2856.3 1935.3,2882.1 2088.9,2941.2 2224,2965 2352.7,2987.6 2679.2,2997.5 2920.1,3001.8"];
+	"componentes/residente/componentes/compFormularioMain/componentes/ImagenNotaSelector.jsx"	[height=0.32986,
+		pos="2550.8,2784",
+		width=8.441];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/residente/componentes/compFormularioMain/componentes/ImagenNotaSelector.jsx"	[pos="e,2391.1,2796.4 1977.7,2831.6 2050.6,2825.1 2142.2,2816.9 2224,2810 2274.6,2805.7 2329.6,2801.2 2379.8,2797.3"];
+	"componentes/residente/componentes/compFormularioMain/componentes/InstafotoSelector.jsx"	[height=0.32986,
+		pos="2550.8,2864",
+		width=8.1285];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/residente/componentes/compFormularioMain/componentes/InstafotoSelector.jsx"	[pos="e,2257.7,2855.7 2103.2,2851.4 2149.8,2852.7 2198.7,2854.1 2246.3,2855.4"];
+	"componentes/residente/componentes/compFormularioMain/componentes/NombreRestaurante.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,3108",
+		width=8.4306];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/residente/componentes/compFormularioMain/componentes/NombreRestaurante.jsx"	[pos="e,2254.6,3095.7 1856,2856.1 1902.2,2897.5 2062.9,3034.3 2224,3087 2230.4,3089.1 2236.9,3091 2243.4,3092.8"];
+	"componentes/residente/componentes/compFormularioMain/componentes/OpcionesPublicacion.jsx"	[height=0.32986,
+		pos="2550.8,2658",
+		width=8.4931];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/residente/componentes/compFormularioMain/componentes/OpcionesPublicacion.jsx"	[pos="e,2490.6,2645.6 1976.8,2831.7 2046,2819.4 2128.3,2795.2 2188,2747 2214.6,2725.5 2195.3,2697.6 2224,2679 2300.4,2629.5 2409.2,2633.9 \
+2479.7,2644"];
+	"componentes/residente/componentes/compFormularioMain/componentes/Subtitulo.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,3066",
+		width=7.4618];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/residente/componentes/compFormularioMain/componentes/Subtitulo.jsx"	[pos="e,2282,3057.9 1859.5,2856.2 1910.8,2892.9 2071.7,3002 2224,3045 2239.2,3049.3 2254.9,3052.9 2270.9,3055.9"];
+	"componentes/residente/componentes/compFormularioMain/componentes/Titulo.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,3024",
+		width=7.191];
+	"componentes/residente/componentes/compFormularioMain/FormMainResidente.jsx" -> "componentes/residente/componentes/compFormularioMain/componentes/Titulo.jsx"	[pos="e,2298.2,3011.6 1866,2856.3 1924.3,2886.6 2082.3,2964.5 2224,2998 2244.3,3002.8 2265.6,3006.7 2287,3010"];
+	"componentes/api/bannerNewsletterGet.js"	[height=0.32986,
+		pos="3205,969.99",
+		width=3.6806];
+	"componentes/residente/componentes/compFormularioMain/FormNewsletter.jsx" -> "componentes/api/bannerNewsletterGet.js"	[pos="e,3101.6,982.36 1896.6,764.35 1969.4,777.84 2100.2,790.36 2188,730.99 2219,710.05 2192.4,674.97 2224,654.99 2346.7,577.33 2768.2,\
+559.32 2877.5,654.99 2968.6,734.73 2828.8,838.48 2913.5,924.99 2958.5,970.99 3029.7,982.58 3090.4,982.51"];
+	"componentes/api/revistasGet.js"	[height=0.32986,
+		pos="3205,3740",
+		width=2.8576];
+	"componentes/residente/componentes/compFormularioMain/FormularioRevistaBanner.jsx" -> "componentes/api/revistasGet.js"	[pos="e,3101.7,3745.7 2057.4,3404.4 2102.6,3413.5 2148.6,3428 2188,3451 2209.8,3463.7 2202.5,3481.7 2224,3495 2477.2,3651.9 2632.9,3473.9 \
+2877.5,3644 2901.5,3660.7 2888.8,3683.3 2913.5,3699 2965.6,3732.1 3033.5,3743 3090.5,3745.4"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/FormNewsletter.jsx"	[pos="e,1594.2,751.99 1414.6,751.99 1469,751.99 1527.3,751.99 1582.8,751.99"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/FormularioRevistaBanner.jsx"	[pos="e,1565.4,3396.8 1190.8,764.24 1227.5,830.69 1401.1,1155.6 1459.5,1446 1470,1498.4 1458.5,3332.4 1495.5,3371 1506.5,3382.4 1527.6,\
+3390 1554.1,3394.9"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/ListaNotasUanl.jsx"	[pos="e,1596,417.62 1329.2,739.62 1377.1,728.32 1426.5,707.6 1459.5,669.99 1526.3,593.85 1420.5,513.01 1495.5,444.99 1511.2,430.75 1544.5,\
+422.76 1584.5,418.67"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/ListaTickets.jsx"	[pos="e,1746.6,899.64 1216.7,764.34 1273,785.17 1392,827.5 1495.5,852.99 1575.1,872.57 1666.5,887.89 1735.3,898"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/VideosDashboard.jsx"	[pos="e,1783.3,2103.3 1190.6,764.28 1226.2,830.96 1395.2,1156.8 1459.5,1446 1474,1511.3 1449.8,1998.1 1495.5,2047 1565.1,2121.4 1692.9,\
+2116.9 1772,2105.1"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/componentesPrincipales/PreguntasSemanales.jsx"	[pos="e,1731.9,3337.7 1190.8,764.24 1227.4,830.7 1400.9,1155.6 1459.5,1446 1478.9,1542.1 1439.8,3130.3 1495.5,3211 1546.2,3284.5 1642.9,\
+3319.2 1721,3335.5"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/infografia/InfografiaForm.jsx"	[pos="e,1796.9,293.65 1334.3,739.63 1381,728.2 1428.4,707.39 1459.5,669.99 1507.8,611.91 1441.3,384.57 1495.5,331.99 1572.5,257.31 1710,\
+274.12 1786.1,291.15"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/Context.jsx"	[pos="e,3120.6,2075.4 1189.4,764.14 1218.9,831.38 1363.8,1165 1459.5,1446 1478.3,1501.1 1459.2,1526.5 1495.5,1572 1725.9,1860.4 1870.9,\
+1863.2 2224,1971 2503,2056.2 2598.8,1945 2877.5,2031 2895,2036.4 2896,2045.8 2913.5,2051 2977,2069.9 3051.6,2075 3109.3,2075.4"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/api/notaDelete.js"	[pos="e,2449.6,2318.7 1190.6,764.29 1226.1,830.99 1394.5,1157 1459.5,1446 1473.1,1506.6 1452.2,1959.4 1495.5,2004 1603.1,2115 2075.1,1964.4 \
+2188,2070 2260.7,2138 2150.3,2224.1 2224,2291 2254.7,2318.8 2356.5,2321.7 2438.2,2319.1"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/api/notasCompletasGet.js"	[pos="e,2421.7,466.52 1311.7,739.67 1363.3,728.71 1419.9,708.2 1459.5,669.99 1495.6,635.14 1455.7,593.52 1495.5,562.99 1617.9,469.17 2042.4,\
+570.61 2188,519.99 2206.4,513.59 2205.6,501.4 2224,494.99 2282.9,474.42 2351.5,467.67 2410.4,466.64"];
+	"componentes/residente/componentes/compFormularioMain/FiltroAutor.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="1841.8,667.99",
+		width=6.3993];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/FiltroAutor.jsx"	[pos="e,1611,677.49 1234.1,739.62 1295.3,725.02 1402.4,701.18 1495.5,688.99 1529.1,684.59 1564.6,681.11 1599.6,678.36"];
+	"componentes/residente/componentes/compFormularioMain/FiltroEstadoNota.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="1841.8,625.99",
+		width=6.941];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/FiltroEstadoNota.jsx"	[pos="e,1591.8,625.96 1242.4,739.62 1299.4,726.4 1387.7,702.83 1459.5,669.99 1476.8,662.09 1477.4,652.86 1495.5,646.99 1522.6,638.17 1551.5,\
+631.9 1580.6,627.54"];
+	"componentes/residente/componentes/compFormularioMain/FiltroTipoCliente.jsx"	[height=0.32986,
+		pos="1841.8,1551",
+		width=6.9097];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/FiltroTipoCliente.jsx"	[pos="e,1790.4,1563.3 1188.8,764.15 1227.9,862.72 1491.1,1526.8 1495.5,1530 1578.7,1590.1 1704.8,1579.3 1779.3,1565.5"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotasUsuarios.jsx"	[height=0.32986,
+		pos="1841.8,831.99",
+		width=7.1701];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/ListaNotasUsuarios.jsx"	[pos="e,1739.3,819.63 1285.5,764.35 1405.3,778.95 1603.9,803.13 1728.3,818.28"];
+	"componentes/residente/componentes/compFormularioMain/SearchNotasLocal.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="1841.8,583.99",
+		width=7.0764];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/SearchNotasLocal.jsx"	[pos="e,1782.8,571.64 1291.4,739.66 1346.5,728.8 1411.8,708.37 1459.5,669.99 1485.2,649.29 1467.6,622.61 1495.5,604.99 1578.9,552.33 1697.5,\
+558.62 1771.7,569.88"];
+	"componentes/residente/componentes/compFormularioMain/componentesListaNotas/ErrorNotas.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,145.99",
+		width=8.5243];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/componentesListaNotas/ErrorNotas.jsx"	[pos="e,2243.5,156.09 1333.3,739.63 1380.3,728.23 1428,707.44 1459.5,669.99 1548.7,563.77 1394.1,454.67 1495.5,359.99 1551.8,307.4 2129,\
+376.53 2188,326.99 2243.8,280.11 2168.6,214.33 2224,166.99 2226.6,164.76 2229.7,162.7 2233.2,160.79"];
+	"componentes/residente/componentes/compFormularioMain/componentesListaNotas/NotaCard.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,229.99",
+		width=8.4201];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/componentesListaNotas/NotaCard.jsx"	[pos="e,2247.4,238.02 1321.2,739.67 1370.9,728.55 1423.5,707.93 1459.5,669.99 1506.7,620.22 1442.7,563.7 1495.5,519.99 1554.8,470.87 2130.8,\
+538.56 2188,486.99 2266.8,415.95 2145.8,322.68 2224,250.99 2227.5,247.79 2231.9,244.91 2237.1,242.34"];
+	"componentes/residente/componentes/compFormularioMain/componentesListaNotas/SinNotas.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,187.99",
+		width=8.3785];
+	"componentes/residente/componentes/compFormularioMain/ListaNotas.jsx" -> "componentes/residente/componentes/compFormularioMain/componentesListaNotas/SinNotas.jsx"	[pos="e,2248.7,196.31 1331.5,739.65 1378.9,728.29 1427.4,707.52 1459.5,669.99 1537.3,579.01 1407.8,484.55 1495.5,402.99 1608.4,297.96 \
+2070,459.24 2188,359.99 2240.8,315.57 2171.3,253.46 2224,208.99 2227.8,205.77 2232.6,202.89 2238.3,200.33"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotasUanl.jsx" -> "componentes/Context.jsx"	[pos="e,3120.7,2077.8 2087.4,416.77 2132.8,420.47 2171.2,428.77 2188,444.99 2248.1,502.98 2165.3,759.59 2224,818.99 2326.7,922.91 2778.3,\
+782.78 2877.5,889.99 2965.2,984.7 2824.1,1957.9 2913.5,2051 2939.8,2078.4 3035,2080.9 3109.4,2078.2"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotasUanl.jsx" -> "componentes/api/notasCompletasGet.js"	[pos="e,2421.7,463.12 2056.4,436.34 2100,439.04 2145.5,441.99 2188,444.99 2261.5,450.17 2343.4,456.67 2410.6,462.2"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotasUanl.jsx" -> "componentes/residente/componentes/compFormularioMain/componentesListaNotas/ErrorNotas.jsx"	[pos="e,2243.5,155.76 2087.5,416.51 2125,405.34 2160.4,387.56 2188,359.99 2249.7,298.32 2158.7,224.87 2224,166.99 2226.6,164.69 2229.7,\
+162.56 2233.2,160.6"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotasUanl.jsx" -> "componentes/residente/componentes/compFormularioMain/componentesListaNotas/NotaCard.jsx"	[pos="e,2247.3,238.83 2087.2,425.57 2132.1,421.26 2170.3,412.95 2188,397.99 2239.3,354.5 2172.4,294.19 2224,250.99 2227.5,248.08 2231.8,\
+245.45 2236.8,243.07"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotasUanl.jsx" -> "componentes/residente/componentes/compFormularioMain/componentesListaNotas/SinNotas.jsx"	[pos="e,2248.7,195.89 2087.3,426.28 2132.4,421.95 2170.7,413.45 2188,397.99 2251.8,341.03 2159.9,265.59 2224,208.99 2227.8,205.65 2232.6,\
+202.68 2238.3,200.03"];
+	"componentes/residente/componentes/compFormularioMain/ListaTickets.jsx" -> "componentes/api/cuponesGet.js"	[pos="e,3146.7,1104.3 2077.3,903.42 2363.2,895.2 2816,890.18 2877.5,937.99 2924.2,974.26 2868,1028.2 2913.5,1066 2974.9,1116.9 3070.7,\
+1115 3135.4,1106"];
+	"componentes/residente/componentes/compFormularioMain/Videos.jsx" -> "componentes/Context.jsx"	[pos="e,3120.7,2066.2 2771.2,3311.4 2811.9,3301.2 2850.1,3282.8 2877.5,3251 2961.5,3153.5 2824.4,2185.9 2913.5,2093 2939.8,2065.6 3035,\
+2063.1 3109.4,2065.7"];
+	"componentes/residente/componentes/compFormularioMain/Videos.jsx" -> "componentes/api/url.js"	[pos="e,3638.7,2691.3 2771.3,3317.8 3032.9,3324.9 3441.7,3328.6 3496.5,3284 3589.8,3208 3629.2,2805.5 3637.8,2702.8"];
+	"componentes/api/videosApi.js"	[height=0.32986,
+		pos="3205,3359",
+		width=2.7118];
+	"componentes/residente/componentes/compFormularioMain/Videos.jsx" -> "componentes/api/videosApi.js"	[pos="e,3107.3,3351.7 2716.3,3322.4 2835.3,3331.3 2992.6,3343.1 3095.9,3350.9"];
+	"componentes/residente/componentes/compFormularioMain/VideosDashboard.jsx" -> "componentes/Context.jsx"	[pos="e,3120.7,2066.8 1925.8,2078.6 2002.9,2067.8 2120.9,2052.9 2224,2047 2514,2030.3 2587.5,2030.9 2877.5,2047 2893.6,2047.9 2897.5,2049.5 \
+2913.5,2051 2978.9,2057 3052.7,2062.3 3109.5,2066.1"];
+	"componentes/residente/componentes/compFormularioMain/VideosDashboard.jsx" -> "componentes/api/videosApi.js"	[pos="e,3107.2,3363.6 1887,2078.7 1961.3,2061 2110.5,2039 2188,2121 2280.4,2218.8 2128.8,3235.9 2224,3331 2284.5,3391.4 2853.8,3374.2 \
+3095.9,3364"];
+	"componentes/api/preguntasApi.js"	[height=0.32986,
+		pos="3205,3482",
+		width=3.0035];
+	"componentes/residente/componentes/compFormularioMain/componentesPrincipales/PreguntasSemanales.jsx" -> "componentes/api/preguntasApi.js"	[pos="e,3096.7,3492.1 1896,3337.6 1968.8,3323.9 2100.3,3311 2188,3371 2219.5,3392.5 2192.2,3427.9 2224,3449 2361.9,3540.5 2855.8,3512 \
+3085.3,3493"];
+	"componentes/api/consejerosApi.js"	[height=0.32986,
+		pos="1841.8,465.99",
+		width=3.0764];
+	"componentes/residente/componentes/formularioColaboradores/OpinionEditorial.jsx" -> "componentes/api/consejerosApi.js"	[pos="e,1730.8,463.41 1201.9,636.73 1248.1,605.9 1375.9,525.22 1495.5,491.99 1568,471.83 1652.2,465.17 1719.3,463.63"];
+	"componentes/residente/componentes/formularioColaboradores/RespuestasSemana.jsx" -> "componentes/api/temaSemanaApi.js"	[pos="e,1722.5,4478.1 1368.7,4454.4 1477.8,4461.7 1613.3,4470.7 1711.1,4477.3"];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/residente/componentes/DetallePost.jsx"	[pos="e,2382.7,3238.4 1186.4,2585.2 1200.8,2653.7 1281.2,2991.7 1495.5,3126 1626.1,3207.9 2047,3106.6 2188,3169 2208.4,3178 2203.7,3194.8 \
+2224,3204 2269.4,3224.6 2322,3234.1 2371.5,3237.7"];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/Context.jsx"	[pos="e,3120.7,2077.3 1195.1,2560.9 1232.8,2520.4 1361.3,2388.9 1495.5,2325 1783.8,2187.7 2595.4,2121.1 2913.5,2093 2978.9,2087.2 3052.7,\
+2081.9 3109.5,2078.1"];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/api/url.js"	[pos="e,3630.2,2666.7 1218,2560.6 1274.6,2540.8 1392.2,2502.7 1495.5,2489 1716,2459.8 3289.8,2474.7 3496.5,2557 3550.5,2578.5 3598.5,2629 \
+3622.9,2657.8"];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/api/CatalogoSeccionesGet.js"	[pos="e,3067.1,2874.8 1194,2585.3 1230.1,2629.3 1358.9,2780 1495.5,2865 1774.7,3038.8 1921.9,2932.7 2188,3126 2208.7,3141 2200.9,3159.9 \
+2224,3171 2289.4,3202.4 2822.9,3218.8 2877.5,3171 2968.9,3090.9 2824.5,2982.7 2913.5,2900 2934.8,2880.2 2995.4,2874.8 3055.8,2874.8"];
+	"componentes/Proximamente.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="1841.8,2552",
+		width=2.9201];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/Proximamente.jsx"	[pos="e,1736.3,2555.3 1459.7,2564.2 1552.7,2561.2 1651.4,2558 1725.1,2555.7"];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/api/cuponesGet.js"	[pos="e,3099.5,1104.3 1184.1,2560.7 1185.4,2464.7 1205.2,1827.7 1495.5,1446 1724,1145.4 1860.1,1109.8 2224,1009 2364,970.23 2750.3,938.89 \
+2877.5,1009 2903.7,1023.4 2887.9,1050.4 2913.5,1066 2965,1097.5 3031.6,1105.3 3088,1104.6"];
+	"componentes/api/notasPorSeccionCategoriaGet.js"	[height=0.32986,
+		pos="1841.8,2430",
+		width=4.441];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/api/notasPorSeccionCategoriaGet.js"	[pos="e,1681.7,2432.5 1209.1,2560.7 1261.1,2536 1384.9,2480.4 1495.5,2456 1551.8,2443.6 1614.3,2436.8 1670.5,2433.2"];
+	"componentes/api/restaurantesPorSeccionCategoriaGet.js"	[height=0.32986,
+		pos="1841.8,2388",
+		width=5.0243];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/api/restaurantesPorSeccionCategoriaGet.js"	[pos="e,1660.5,2384.6 1200.8,2560.8 1245.8,2528.8 1374,2443 1495.5,2409 1544.3,2395.3 1598.4,2388.4 1649.1,2385.2"];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/api/revistasGet.js"	[pos="e,3101.8,3728.6 1190.2,2585 1223.6,2650.4 1383.2,2969.6 1459.5,3249 1473.9,3301.9 1456.7,3454.3 1495.5,3493 1552.5,3549.8 2717.7,\
+3685.3 3090.4,3727.3"];
+	"componentes/residente/componentes/BannerHorizontal.jsx"	[height=0.32986,
+		pos="2550.8,4132",
+		width=5.1493];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/residente/componentes/BannerHorizontal.jsx"	[pos="e,2365.1,4131 1190.6,2584.9 1226.1,2649.8 1394.6,2966.8 1459.5,3249 1487,3368.4 1424.8,3699 1495.5,3799 1698.9,4086.5 1881.4,4029.1 \
+2224,4111 2265.5,4120.9 2310.7,4126.8 2353.8,4130.2"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/BarraMarquee.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,3778",
+		width=7.8889];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/residente/componentes/seccionesCategorias/componentes/BarraMarquee.jsx"	[pos="e,2315.5,3765.6 1190.5,2585 1225.2,2650 1390.8,2967.7 1459.5,3249 1480.1,3333.3 1436.3,3574.5 1495.5,3638 1607.4,3757.9 2061,3738.5 \
+2224,3757 2250,3759.9 2277.2,3762.5 2304.3,3764.7"];
+	"componentes/residente/componentes/componentesColumna2/CarruselPosts.jsx"	[height=0.32986,
+		pos="1841.8,2346",
+		width=6.9306];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/residente/componentes/componentesColumna2/CarruselPosts.jsx"	[pos="e,1592.1,2345.4 1196.9,2560.7 1237.1,2523.2 1365.1,2410.6 1495.5,2367 1522.6,2357.9 1551.6,2351.5 1580.9,2347"];
+	"componentes/residente/componentes/componentesColumna2/TarjetaHorizontalPost.jsx"	[height=0.32986,
+		pos="1841.8,2594",
+		width=7.5347];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/residente/componentes/componentesColumna2/TarjetaHorizontalPost.jsx"	[pos="e,1570.3,2585.3 1459.7,2581.8 1492.5,2582.9 1526.1,2583.9 1559.1,2585"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/CateogoriaHeader.jsx"	[height=0.32986,
+		pos="1841.8,2726",
+		width=8.2014];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/residente/componentes/seccionesCategorias/componentes/CateogoriaHeader.jsx"	[pos="e,1689.1,2713.6 1212.6,2585.3 1266.7,2608 1388.4,2656.7 1495.5,2682 1554.3,2695.9 1619.9,2705.6 1678,2712.3"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/CuponesCarrusel.jsx"	[height=0.32986,
+		pos="2550.8,515.99",
+		width=8.1389];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/residente/componentes/seccionesCategorias/componentes/CuponesCarrusel.jsx"	[pos="e,2257.3,520.85 1188.1,2560.8 1216.8,2474.1 1391,1938.5 1459.5,1488 1470.8,1413.5 1442.3,864.3 1495.5,810.99 1604.4,701.91 2073.9,\
+876.58 2188,772.99 2266.6,701.67 2145.8,608.68 2224,536.99 2229.4,532.03 2237.1,527.86 2246.4,524.37"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/HeaderSecciones.jsx"	[height=0.32986,
+		pos="2550.8,2700",
+		width=8.1597];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/residente/componentes/seccionesCategorias/componentes/HeaderSecciones.jsx"	[pos="e,2346.8,2687.6 1267.5,2585.3 1330.1,2594.3 1418.1,2606.4 1495.5,2615 1818.5,2650.9 1899.9,2654.3 2224,2679 2260,2681.7 2298.2,2684.4 \
+2335.3,2686.9"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/ImagenesRestaurantesDestacados.jsx"	[height=0.32986,
+		pos="1841.8,2510",
+		width=9.6181];
+	"componentes/residente/componentes/seccionesCategorias/MainSeccionesCategorias.jsx" -> "componentes/residente/componentes/seccionesCategorias/componentes/ImagenesRestaurantesDestacados.jsx"	[pos="e,1600,2522.4 1263.5,2560.6 1326.3,2551.3 1416.3,2538.7 1495.5,2531 1525.7,2528 1557.4,2525.4 1588.9,2523.2"];
+	"componentes/api/infografiaApi.js"	[height=0.32986,
+		pos="3205,414.99",
+		width=2.941];
+	"componentes/residente/infografia/InfografiaForm.jsx" -> "componentes/api/infografiaApi.js"	[pos="e,3158.6,427.32 1914.8,293.63 1989.6,277.82 2106.8,244.42 2188,179.99 2210.9,161.83 2198.3,138.88 2224,124.99 2287.9,90.454 2822.9,\
+77.169 2877.5,124.99 2968.3,204.42 2825.7,311.33 2913.5,393.99 2975.7,452.54 3082.4,442.94 3147.7,429.65"];
+	"componentes/residente/infografia/InfografiaMain.jsx" -> "componentes/DataContext.jsx"	[pos="e,3106.3,4224.2 2592.5,4553.7 2660,4531.3 2796,4478.1 2877.5,4390 2904.3,4361.1 2884.3,4335.5 2913.5,4309 2963.5,4263.6 3035.5,4239.3 \
+3095.3,4226.4"];
+	"componentes/api/infografiasGet.js"	[height=0.32986,
+		pos="3205,3976",
+		width=3.0764];
+	"componentes/residente/infografia/InfografiaMain.jsx" -> "componentes/api/infografiasGet.js"	[pos="e,3093.8,3984.3 2604.9,4553.7 2679.5,4533.4 2813.1,4485.3 2877.5,4390 2956.9,4272.5 2824.3,4183.2 2913.5,4073 2954.5,4022.4 3022.6,\
+3998 3082.7,3986.4"];
+	"componentes/residente/infografia/InfografiaCard.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="3205,4608",
+		width=4.5243];
+	"componentes/residente/infografia/InfografiaMain.jsx" -> "componentes/residente/infografia/InfografiaCard.jsx"	[pos="e,3041.8,4597.5 2714.2,4576.4 2810.5,4582.6 2932.5,4590.5 3030.6,4596.8"];
+	"componentes/residente/infografia/InfografiaMain.css"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="3205,4566",
+		width=4.5868];
+	"componentes/residente/infografia/InfografiaMain.jsx" -> "componentes/residente/infografia/InfografiaMain.css"	[pos="e,3039.6,4566 2714.2,4566 2809.7,4566 2930.4,4566 3028.1,4566"];
+	"componentes/residente/instagram/LinkInBio.jsx" -> "componentes/api/url.js"	[pos="e,3640.1,2691.1 1333.4,3276.3 1628.9,3287 2309.1,3303 2877.5,3251 3155.5,3225.6 3286.9,3328.4 3496.5,3144 3632.5,3024.3 3641.1,2778.6 \
+3640.3,2702.2"];
+	"componentes/residente/paginaCliente/PaginaCliente.jsx" -> "componentes/api/url.js"	[pos="e,3639.5,2691.2 1358.9,3654.9 1884.3,3635.8 3417.3,3574.4 3496.5,3503 3619.4,3392.2 3636.9,2825.5 3639.3,2702.5"];
+	"componentes/residente/paginaCliente/PaginaCliente.jsx" -> "componentes/api/notasPublicadasGet.js"	[pos="e,3075.5,3676.9 1358.8,3662.5 1753.2,3665.8 2705.1,3673.8 3064,3676.8"];
+	"componentes/residente/componentes/componentesColumna2/MainLateralPostTarjetas.jsx"	[height=0.32986,
+		pos="1841.8,3778",
+		width=7.7743];
+	"componentes/residente/paginaCliente/PaginaCliente.jsx" -> "componentes/residente/componentes/componentesColumna2/MainLateralPostTarjetas.jsx"	[pos="e,1593.4,3765.7 1217.6,3673.3 1274,3693.5 1392.1,3733.2 1495.5,3752 1523.4,3757.1 1552.8,3761.1 1582.1,3764.4"];
+	"hooks/useClientesValidos.js" -> "componentes/Context.jsx"	[pos="e,3120.7,2077.8 2642.8,787.96 2718,785.28 2821.2,795.62 2877.5,861.99 2963,962.78 2822,1955.6 2913.5,2051 2939.8,2078.4 3035,2080.9 \
+3109.4,2078.2"];
+	"hooks/useClientesValidos.js" -> "componentes/api/url.js"	[pos="e,3639.5,2667 2642.5,801.15 2715.8,808.61 2816.3,830.74 2877.5,893.99 2921.9,939.85 2864.3,992.3 2913.5,1033 3013.5,1115.8 3403.6,\
+980.28 3496.5,1071 3615.3,1187 3636.8,2467 3639.3,2655.8"];
+	"componentes/DropdownMenu.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,994.99",
+		width=3.0243];
+	"componentes/ElPublicoOpina.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,1902",
+		width=2.9826];
+	"componentes/SearchResults.jsx" -> "componentes/api/url.js"	[pos="e,3639.4,2691.1 2656,4205.8 2900.1,4191.2 3489,4155.2 3496.5,4148 3605,4042.7 3635.1,2883.4 3639.1,2702.6"];
+	"componentes/SearchResults.jsx" -> "componentes/api/notasPublicadasGet.js"	[pos="e,3132.5,3665.6 2655.8,4223.3 2728.7,4224.9 2822.7,4213.3 2877.5,4153 2942.6,4081.3 2847.1,3789.4 2913.5,3719 2965.6,3663.8 3055.3,\
+3659 3121.3,3664.6"];
+	"componentes/api/CatalogoSeccionesGet.js" -> "componentes/api/url.js"	[pos="e,3634.4,2691.2 3309.4,2895.4 3367.6,2897.6 3439.7,2892.2 3496.5,2862 3564.4,2825.8 3610.5,2742 3629.7,2701.6"];
+	"componentes/api/loginPost.js" -> "componentes/api/url.js"	[pos="e,3639.3,2666.8 3270.1,2261.6 3334,2253.1 3431.8,2250.8 3496.5,2300 3614.4,2389.5 3635.2,2587.9 3638.8,2655.7"];
+	"componentes/api/notasPublicadasGet.js" -> "componentes/api/url.js"	[pos="e,3639.7,2691.3 3303.9,3690.4 3367.4,3692.6 3447.1,3683.4 3496.5,3634 3632.6,3497.6 3639.7,2836.4 3639.7,2702.6"];
+	"componentes/api/RestaurantFetcher.jsx" -> "componentes/api/url.js"	[pos="e,3639.5,2666.7 2678.2,677.98 2738.9,680.6 2812.4,686.21 2877.5,697.99 3160.1,749.09 3316,659.71 3496.5,882.99 3613.5,1027.6 3636.6,\
+2454.4 3639.3,2655.5"];
+	"componentes/api/RestaurantPoster.jsx" -> "componentes/api/url.js"	[pos="e,3638.9,2666.8 2674.9,1903.7 2903.1,1898.5 3379.6,1901.3 3496.5,2009 3594.7,2099.5 3630.8,2547 3638.1,2655.3"];
+	"componentes/api/SeccionesDataFetcher.jsx"	[height=0.32986,
+		pos="3205,1012",
+		width=3.8785];
+	"componentes/api/SeccionesDataFetcher.jsx" -> "componentes/api/url.js"	[pos="e,3639.5,2666.8 3345.1,1008 3408.8,1009.3 3474.9,1016.3 3496.5,1038 3616.2,1158 3636.9,2462.8 3639.4,2655.3"];
+	"componentes/api/bannerNewsletterGet.js" -> "componentes/api/url.js"	[pos="e,3639.5,2666.9 3250,957.65 3313.8,942.72 3431.6,926.85 3496.5,990.99 3620.7,1113.7 3637.6,2460.6 3639.4,2655.5"];
+	"componentes/api/catalogoSeccionesGet.js"	[height=0.32986,
+		pos="3205,2963",
+		width=3.7847];
+	"componentes/api/catalogoSeccionesGet.js" -> "componentes/api/url.js"	[pos="e,3637.1,2691.2 3290.4,2975.3 3352.3,2980 3435.8,2976.5 3496.5,2937 3582.6,2881 3621.6,2754.5 3634.5,2702.3"];
+	"componentes/api/consejerosApi.js" -> "componentes/api/url.js"	[pos="e,3639.3,2666.7 1952.8,461.24 2029,458.2 2132.6,454.54 2224,452.99 2369.2,450.51 2751.9,380.1 2877.5,452.99 2905.4,469.17 2886.1,\
+499.02 2913.5,515.99 2968.7,550.13 3450.4,503.35 3496.5,548.99 3575.5,627.14 3632.1,2428.4 3638.9,2655.5"];
+	"componentes/api/cuponesGet.js" -> "componentes/api/url.js"	[pos="e,3638.5,2666.8 3212,1104.3 3245.5,1174.1 3411.8,1526.8 3496.5,1832 3585.2,2151.7 3627.8,2555.4 3637.5,2655.7"];
+	"componentes/api/giveawayDescuentosGet.js"	[height=0.32986,
+		pos="3205,2841",
+		width=3.9826];
+	"componentes/api/giveawayDescuentosGet.js" -> "componentes/api/url.js"	[pos="e,3631.8,2691.3 3348.7,2850.3 3397.4,2848.4 3451,2840.6 3496.5,2820 3554.7,2793.7 3602.8,2732.9 3625.6,2700.4"];
+	"componentes/api/infografiaApi.js" -> "componentes/api/url.js"	[pos="e,3639.3,2666.6 3311.1,410.56 3383.5,409.99 3471.2,415.06 3496.5,440.99 3578.1,524.69 3632.6,2421.7 3639,2655.4"];
+	"componentes/api/infografiasGet.js" -> "componentes/api/url.js"	[pos="e,3639.2,2691 3255.3,3988.3 3320,4001.3 3432.9,4012.1 3496.5,3950 3589.7,3858.9 3632.3,2867.1 3638.7,2702.2"];
+	"componentes/api/notaCrearPostPut.js" -> "componentes/api/url.js"	[pos="e,3627.2,2691.2 3327.3,2804.4 3380.5,2803.2 3443,2796.8 3496.5,2778 3545.2,2760.8 3592.6,2722.5 3618.8,2698.9"];
+	"componentes/api/notaDelete.js" -> "componentes/api/url.js"	[pos="e,3638.9,2666.8 2651.8,2308.7 2880.8,2302 3428.2,2291.2 3496.5,2338 3606.8,2413.5 3632.3,2591.6 3638,2655.6"];
+	"componentes/api/notaImagenDelete.js"	[height=0.32986,
+		pos="3205,2757",
+		width=3.441];
+	"componentes/api/notaImagenDelete.js" -> "componentes/api/url.js"	[pos="e,3612.3,2691.3 3329.3,2753 3381.4,2749.5 3442.4,2743 3496.5,2731 3533.3,2722.8 3573.6,2707.6 3602,2695.7"];
+	"componentes/api/notasCategoriasBuscador.js"	[height=0.32986,
+		pos="3205,4094",
+		width=4.0451];
+	"componentes/api/notasCategoriasBuscador.js" -> "componentes/api/url.js"	[pos="e,3639.3,2691.3 3255.1,4106.3 3319.9,4119.4 3433.2,4130.5 3496.5,4068 3598,3967.8 3633.8,2877.8 3639,2702.7"];
+	"componentes/api/notasCompletasGet.js" -> "componentes/api/url.js"	[pos="e,3639.7,2666.7 2620.7,461.63 2690.3,452.81 2798.6,449.44 2877.5,494.99 2902.5,509.41 2888.6,534.45 2913.5,548.99 3025.7,614.46 \
+3404.9,499.89 3496.5,591.99 3649.7,745.97 3641.6,2434.7 3639.8,2655.3"];
+	"componentes/api/notasPorSeccionCategoriaGet.js" -> "componentes/api/url.js"	[pos="e,3634.7,2667.1 2001.9,2431.1 2205.2,2433 2567.6,2438.2 2877.5,2452 2946.4,2455.1 3435.7,2461.5 3496.5,2494 3565.1,2530.6 3611.2,\
+2616 3630,2656.7"];
+	"componentes/api/preguntasApi.js" -> "componentes/api/url.js"	[pos="e,3639.1,2691.1 3313.4,3491.5 3374.9,3490.8 3449.1,3478.6 3496.5,3432 3604,3326.4 3633.3,2818.1 3638.6,2702.5"];
+	"componentes/api/registroPost.js"	[height=0.32986,
+		pos="3205,2430",
+		width=2.8993];
+	"componentes/api/registroPost.js" -> "componentes/api/url.js"	[pos="e,3636,2666.8 3309.7,2417.8 3368.4,2415.9 3441.1,2422.4 3496.5,2456 3573.8,2502.8 3616.7,2609 3632.5,2656"];
+	"componentes/api/restaurantesBasicosGet.js" -> "componentes/api/url.js"	[pos="e,3639.3,2666.6 3346,366.22 3409.4,366.42 3475.1,372.34 3496.5,393.99 3580.5,478.82 3632.9,2418.2 3639,2655.3"];
+	"componentes/api/restaurantesPorSeccionCategoriaGet.js" -> "componentes/api/url.js"	[pos="e,3637.6,2666.9 2023,2385.4 2438.9,2380 3434.6,2371.2 3496.5,2409 3588.1,2464.9 3624.3,2601 3635.5,2655.7"];
+	"componentes/api/revistasGet.js" -> "componentes/api/url.js"	[pos="e,3639.8,2691.2 3284.4,3752.4 3350.2,3757.9 3442,3753.6 3496.5,3699 3642.4,3553 3641.5,2841.2 3640,2702.5"];
+	"componentes/api/temaSemanaApi.js" -> "componentes/api/url.js"	[pos="e,3639.6,2691.3 1961,4488.7 2330.3,4496.7 3440.6,4516.3 3496.5,4464 3631.5,4337.7 3639.2,2904.6 3639.6,2702.6"];
+	"componentes/api/ticketCrearPost.js" -> "componentes/api/url.js"	[pos="e,3639.3,2666.7 3319.8,324.43 3390.4,323.06 3472.1,327.32 3496.5,351.99 3582.1,438.47 3633.2,2415.4 3639.1,2655.2"];
+	"componentes/api/uanlApi.js"	[height=0.32986,
+		pos="3205,2232",
+		width=2.5243];
+	"componentes/api/uanlApi.js" -> "componentes/api/url.js"	[pos="e,3639.9,2666.9 3259.6,2219.6 3323.1,2208.3 3428.7,2200.4 3496.5,2253 3627.9,2354.9 3639.7,2582.5 3640,2655.8"];
+	"componentes/api/videosApi.js" -> "componentes/api/url.js"	[pos="e,3638.8,2691.2 3278.8,3371.3 3344,3378 3438.2,3376 3496.5,3323 3591.5,3236.7 3629.9,2807.8 3637.9,2702.4"];
+	"componentes/formulario100estrellas/componentes/FotosLugar.jsx" -> "componentes/api/url.js"	[pos="e,3639.5,2666.6 3291.7,891.63 3357.5,887.42 3445.5,894.18 3496.5,948.99 3618.5,1080 3637.3,2457.3 3639.4,2655.3"];
+	"componentes/formulario100estrellas/componentes/Imagenes.jsx" -> "componentes/api/url.js"	[pos="e,3639.2,2666.7 2753.2,1779.5 2998.9,1780.9 3394.1,1799.3 3496.5,1899 3608.5,2007.9 3634.4,2536.9 3638.8,2655.4"];
+	"componentes/formulario100estrellas/componentes/NuevasSeccionesCategorias.jsx" -> "componentes/api/SeccionesDataFetcher.jsx"	[pos="e,3157.5,1024.3 2810,754.03 2840.3,758.39 2864.9,765.59 2877.5,776.99 2949.1,841.61 2842.2,926.08 2913.5,990.99 2976.3,1048.1 3081.5,\
+1039.4 3146.7,1026.6"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx"	[height=0.32986,
+		pos="1841.8,1509",
+		width=5.5451];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/api/RestaurantFetcher.jsx"	[pos="e,2423.2,663.99 2041.6,1519 2105.8,1517.7 2166.2,1510 2188,1488 2246.8,1428.4 2168.8,797.98 2224,734.99 2269.8,682.69 2345.1,666.65 \
+2411.8,664.27"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/api/RestaurantPoster.jsx"	[pos="e,2426.4,1915.9 2041.4,1499.6 2105.5,1501 2165.7,1508.6 2188,1530 2245.5,1585.2 2166.6,1831.6 2224,1887 2251.1,1913.1 2337.9,1917.8 \
+2415.1,1916.2"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/FormularioMain.css"	[pos="e,2371.6,1356.3 2041.7,1515.4 2104.5,1513.6 2163.8,1506.4 2188,1488 2227.3,1458.1 2184.8,1412.9 2224,1383 2246.6,1365.7 2301.7,1358.7 \
+2360.3,1356.7"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/Categorias.jsx"	[pos="e,2345.4,1314.1 2041.7,1516.6 2104.9,1514.9 2164.5,1507.6 2188,1488 2239.6,1444.9 2172.4,1384.2 2224,1341 2242.6,1325.4 2285.4,1317.9 \
+2334,1314.8"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/CincoRazones.jsx"	[pos="e,2334.2,1272.1 2041.8,1517.3 2105.2,1515.7 2165,1508.3 2188,1488 2252.2,1431.5 2159.9,1355.6 2224,1299 2240.9,1284.1 2278.7,1276.4 \
+2322.8,1272.9"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/CodigoVestir.jsx"	[pos="e,2340.3,1703.6 2041.7,1501.3 2104.9,1503 2164.5,1510.4 2188,1530 2239.6,1573.1 2172.4,1633.8 2224,1677 2242,1692.1 2282.5,1699.6 \
+2329,1702.9"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/ExpertosOpinan.jsx"	[pos="e,2329.3,1659.7 2041.7,1502.5 2104.5,1504.4 2163.8,1511.5 2188,1530 2227.3,1559.9 2184.8,1605 2224,1635 2241.1,1648 2276.5,1655.2 \
+2318,1658.8"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/Historia.jsx"	[pos="e,2487.8,1626.4 2041.8,1505.2 2103.7,1507.4 2162.4,1514.1 2188,1530 2215.4,1547 2196.6,1575.9 2224,1593 2299.9,1640.4 2406.2,1637.3 \
+2476.4,1628"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/Imagenes.jsx"	[pos="e,2348.4,1789 2041.7,1500.2 2105.4,1501.8 2165.2,1509.3 2188,1530 2264.8,1599.9 2147.3,1690.9 2224,1761 2242.4,1777.8 2286.7,1785.6 \
+2336.9,1788.5"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/Informacion.jsx"	[pos="e,2342.5,1573.1 2041.8,1505.3 2090.4,1508.7 2141.7,1516 2188,1530 2205.7,1535.4 2206.3,1545.6 2224,1551 2258,1561.4 2294.9,1567.9 \
+2331.3,1571.9"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/Logros.jsx"	[pos="e,2357.6,1524.3 2041.6,1514.9 2136.7,1517.7 2250.5,1521.1 2346.3,1523.9"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/OcasionIdeal.jsx"	[pos="e,2338.5,1494.3 2041.6,1503.1 2130.5,1500.4 2235.6,1497.3 2327.2,1494.6"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/QuePido.jsx"	[pos="e,2351.6,1444.1 2041.8,1512.7 2090.4,1509.3 2141.7,1502 2188,1488 2205.7,1482.6 2206.3,1472.4 2224,1467 2260.8,1455.7 2301.1,1449 \
+2340.3,1445.1"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/Reconocimientos.jsx"	[pos="e,2326.2,1230.2 2041.7,1517.7 2105.4,1516.2 2165.2,1508.7 2188,1488 2264.8,1418 2147.3,1327.1 2224,1257 2239.7,1242.7 2274,1234.9 \
+2314.8,1231.2"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/RedesSociales.jsx"	[pos="e,2333.1,1187.4 2041.5,1518 2105.4,1516.6 2165.4,1509 2188,1488 2277.5,1404.5 2134.6,1298.6 2224,1215 2240.4,1199.6 2277.9,1191.8 \
+2321.8,1188.3"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/Resenas.jsx"	[pos="e,2351.5,1144.3 2041.7,1518.2 2105.6,1516.8 2165.6,1509.2 2188,1488 2290.2,1391 2121.9,1270.1 2224,1173 2242.5,1155.4 2288.4,1147.6 \
+2340,1144.8"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/Sucursales.jsx"	[pos="e,2345,1873.4 2041.7,1499.7 2105.6,1501.2 2165.6,1508.8 2188,1530 2290.2,1626.9 2121.9,1747.8 2224,1845 2241.7,1861.9 2284.7,1869.8 \
+2333.7,1872.8"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/Testimonios.jsx"	[pos="e,2342.1,1831 2041.5,1499.9 2105.4,1501.4 2165.4,1509 2188,1530 2277.5,1613.4 2134.6,1719.4 2224,1803 2241.5,1819.4 2283.1,1827.2 \
+2330.8,1830.4"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/TipoRestaurante.jsx"	[pos="e,2328.3,1745.5 2041.8,1500.7 2105.2,1502.3 2165,1509.7 2188,1530 2252.2,1586.5 2159.9,1662.4 2224,1719 2240.1,1733.2 2275.4,1740.9 \
+2317,1744.6"];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/UbicacionPrincipal.jsx"	[pos="e,2487.8,1391.6 2041.8,1512.8 2103.7,1510.6 2162.4,1503.9 2188,1488 2215.4,1471 2196.6,1442.1 2224,1425 2299.9,1377.6 2406.2,1380.7 \
+2476.4,1390"];
+	"componentes/formulario100estrellas/componentes/ZonasHabilitadas.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="2550.8,1950",
+		width=6.2326];
+	"componentes/formulario100estrellas/FormularioMainBackup.jsx" -> "componentes/formulario100estrellas/componentes/ZonasHabilitadas.jsx"	[pos="e,2325.9,1956.5 2041.5,1499.4 2105.6,1500.8 2165.8,1508.4 2188,1530 2251.9,1592 2160.2,1866.8 2224,1929 2239.2,1943.8 2273.6,1951.8 \
+2314.5,1955.6"];
+	"componentes/formulario100estrellas/componentes/Imagen.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,2376",
+		width=5.4201];
+	"componentes/promociones/componentes/FormularioPromoExt.jsx" -> "componentes/utils/Iconografia.jsx"	[pos="e,3612.3,156.64 3412.5,102.82 3440.9,106.38 3469.6,110.99 3496.5,116.99 3533.3,125.18 3573.6,140.41 3602,152.27"];
+	"componentes/promociones/componentes/TicketPromo.jsx" -> "componentes/api/url.js"	[pos="e,3639.7,2666.7 3253.7,600.66 3318.6,587.1 3433.6,574.92 3496.5,638.99 3645.1,790.49 3641,2438.7 3639.8,2655.5"];
+	"componentes/residente/Newsletter/FotoNewsletter.jsx" -> "componentes/api/url.js"	[pos="e,3637.8,2666.9 2711.8,2080.3 2766.7,2089.4 2827,2105.1 2877.5,2132 2897.5,2142.6 2892.9,2158.6 2913.5,2168 3031.6,2222.1 3395,2129.9 \
+3496.5,2211 3569.1,2269 3622.1,2569.6 3636,2655.8"];
+	"componentes/residente/componentes/componentesColumna2/PostPrincipal.jsx"	[height=0.32986,
+		pos="3205,208.99",
+		width=6.8472];
+	"componentes/residente/Newsletter/FotoNewsletter.jsx" -> "componentes/residente/componentes/componentesColumna2/PostPrincipal.jsx"	[pos="e,3157.8,196.65 2720.1,2057.7 2779.3,2045.1 2840.2,2019.9 2877.5,1971 2936,1894.3 2847.7,305.49 2913.5,234.99 2972,172.36 3080.1,\
+181.16 3146.6,194.33"];
+	"componentes/residente/componentes/componentesColumna2/PostPrincipal.jsx" -> "componentes/api/url.js"	[pos="e,3639.3,2666.8 3427.4,221.31 3453.7,231.56 3477.9,246.51 3496.5,267.99 3579.2,363.31 3633,2412.8 3639,2655.6"];
+	"componentes/residente/componentes/componentesColumna2/PostPrincipal.jsx" -> "componentes/utils/Iconografia.jsx"	[pos="e,3532.2,179.59 3346.8,196.62 3394.3,192.38 3447.7,187.55 3496.5,182.99 3504.4,182.24 3512.6,181.47 3520.9,180.68"];
+	"componentes/residente/PlantillasRehusables/PlantillaLateralPostTarjetas.jsx"	[height=0.32986,
+		pos="3205,2114",
+		width=6.566];
+	"componentes/residente/PlantillasRehusables/PlantillaLateralPostTarjetas.jsx" -> "componentes/api/url.js"	[pos="e,3638.2,2666.6 3262.3,2101.7 3326.7,2091.1 3431.5,2085.2 3496.5,2140 3578.3,2209 3625.6,2560.8 3636.9,2655.5"];
+	"componentes/residente/PlantillasRehusables/PlantillaPostPrincipal.jsx"	[height=0.32986,
+		pos="3205,288.99",
+		width=6.0556];
+	"componentes/residente/PlantillasRehusables/PlantillaPostPrincipal.jsx" -> "componentes/api/url.js"	[pos="e,3639.3,2666.7 3423.2,286.16 3456.5,290.07 3484,297.35 3496.5,309.99 3583.6,398.16 3633.4,2414.7 3639.1,2655.5"];
+	"componentes/residente/PlantillasRehusables/PlantillaPostPrincipal.jsx" -> "componentes/utils/Iconografia.jsx"	[pos="e,3626.2,181.13 3423.5,281.35 3448.5,277.02 3473.3,271.06 3496.5,262.99 3544,246.45 3591.2,210.76 3617.7,188.42"];
+	"componentes/residente/PlantillasRehusables/PlantillaTresTarjetas.jsx"	[height=0.32986,
+		pos="3205,2030",
+		width=5.9931];
+	"componentes/residente/PlantillasRehusables/PlantillaTresTarjetas.jsx" -> "componentes/api/url.js"	[pos="e,3638.8,2666.7 3254.7,2017.7 3318.3,2004.7 3429.4,1993.3 3496.5,2051 3591.4,2132.5 3629.7,2551 3637.9,2655.4"];
+	"componentes/residente/Uanl/DetalleUanl.jsx"	[height=0.32986,
+		pos="1841.8,3190",
+		width=3.9201];
+	"componentes/residente/Uanl/DetalleUanl.jsx" -> "componentes/residente/componentes/DetallePost.jsx"	[pos="e,2382.8,3220.5 1983.3,3197.9 2094.8,3204.2 2251.3,3213.1 2371.6,3219.9"];
+	"componentes/residente/Uanl/UanlListado.jsx"	[height=0.32986,
+		pos="2550.8,271.99",
+		width=3.941];
+	"componentes/residente/Uanl/UanlListado.jsx" -> "componentes/residente/componentes/componentesColumna2/PostPrincipal.jsx"	[pos="e,2981.4,221.32 2692.9,273.71 2750.8,271.64 2818.1,265.61 2877.5,250.99 2894.5,246.8 2896.6,239.38 2913.5,234.99 2931.7,230.26 2950.8,\
+226.35 2970.1,223.14"];
+	"componentes/residente/Uanl/UanlPage.jsx"	[height=0.32986,
+		pos="1841.8,709.99",
+		width=3.7743];
+	"componentes/residente/Uanl/UanlPage.jsx" -> "componentes/api/uanlApi.js"	[pos="e,3113.8,2238.8 1977.8,700.24 2061.8,697.44 2159.3,701.3 2188,730.99 2292.9,839.53 2122.1,1977.6 2224,2089 2322.7,2196.9 2746.8,\
+2099.5 2877.5,2165 2898.3,2175.4 2892.6,2192.7 2913.5,2203 2971.7,2231.5 3044.3,2238.8 3102.4,2238.9"];
+	"componentes/residente/Uanl/UanlPage.jsx" -> "componentes/residente/Uanl/UanlListado.jsx"	[pos="e,2408.4,265.85 1978.1,719.15 2061.7,721.62 2158.5,717.62 2188,688.99 2250.7,628.25 2161.9,359.31 2224,297.99 2248.8,273.48 2324.9,\
+266.51 2397.3,265.89"];
+	"componentes/residente/componentes/BannerChevrolet.jsx"	[height=0.32986,
+		pos="1841.8,4141",
+		width=5.1076];
+	"componentes/residente/componentes/BannerChevrolet.jsx" -> "componentes/api/url.js"	[pos="e,3639.4,2691.3 2026,4147.9 2088.8,4150 2159.4,4152 2224,4153 2514.4,4157.6 2587.7,4173 2877.5,4153 2893.6,4151.9 2897.4,4149.6 \
+2913.5,4148 2978.1,4141.7 3449.7,4159.9 3496.5,4115 3603.1,4012.8 3634.7,2881.3 3639.1,2702.7"];
+	"componentes/residente/componentes/BannerChevrolet.jsx" -> "componentes/residente/componentes/BannerHorizontal.jsx"	[pos="e,2365.1,4134.3 2025.7,4138.7 2126.3,4137.4 2251.1,4135.8 2353.6,4134.5"];
+	"componentes/residente/componentes/BannerHorizontal.jsx" -> "componentes/DataContext.jsx"	[pos="e,3106.2,4200 2652.6,4144.4 2772.4,4159 2971.5,4183.5 3094.9,4198.6"];
+	"componentes/residente/componentes/BannerHorizontal.jsx" -> "componentes/api/revistasGet.js"	[pos="e,3176.1,3752.3 2736.6,4138.7 2797.3,4137.1 2855.1,4130 2877.5,4111 2931.7,4064.9 2874.5,4014.5 2913.5,3955 2977.7,3857 3102.8,3787.6 \
+3165.8,3757.2"];
+	"componentes/residente/componentes/DetalleBannerRevista.jsx"	[height=0.32986,
+		pos="1183,3778",
+		width=5.5139];
+	"componentes/residente/componentes/DetalleBannerRevista.jsx" -> "componentes/residente/componentes/DetallePost.jsx"	[pos="e,2382.7,3226 1298.9,3765.6 1355.5,3753.5 1419.9,3729.4 1459.5,3682 1526,3602.2 1418.5,3520.7 1495.5,3451 1609.8,3347.6 2067.3,3508.9 \
+2188,3413 2232.9,3377.3 2181.4,3327.4 2224,3289 2264.1,3252.9 2318.5,3235.3 2371.4,3227.5"];
+	"componentes/residente/componentes/DetalleBannerRevista.jsx" -> "componentes/api/url.js"	[pos="e,3639.1,2691.2 1284.4,3790.3 1336.7,3797.3 1401.7,3806.6 1459.5,3817 1801.9,3878.7 1878.1,3947.4 2224,3985 2368.4,4000.7 2741,4034.4 \
+2877.5,3985 2897.1,3977.9 2894.3,3963.1 2913.5,3955 3033.5,3904.3 3403.8,3985.5 3496.5,3894 3584.9,3806.7 3631.2,2864.5 3638.6,2702.6"];
+	"componentes/residente/componentes/DetalleBannerRevista.jsx" -> "componentes/residente/componentes/componentesColumna2/MainLateralPostTarjetas.jsx"	[pos="e,1561.7,3778 1381.9,3778 1435,3778 1493.4,3778 1550.3,3778"];
+	"componentes/residente/componentes/componentesColumna2/MainLateralPostTarjetas.jsx" -> "componentes/api/url.js"	[pos="e,3639,2691.3 1861.1,3790.1 1914.4,3824.5 2074.7,3922 2224,3955 2365.8,3986.3 2742.2,4007.6 2877.5,3955 2897.7,3947.1 2893.9,3931.3 \
+2913.5,3922 3150,3809.7 3313.4,4024.2 3496.5,3837 3579.2,3752.5 3630.1,2859.3 3638.4,2702.4"];
+	"componentes/residente/componentes/componentesColumna2/MainLateralPostTarjetas.jsx" -> "componentes/residente/componentes/seccionesCategorias/componentes/BarraMarquee.jsx"	[pos="e,2266.4,3778 2121.9,3778 2165.6,3778 2210.9,3778 2254.9,3778"];
+	"componentes/residente/componentes/componentesColumna2/PortadaRevista.jsx"	[height=0.32986,
+		pos="2550.8,3934",
+		width=7.0347];
+	"componentes/residente/componentes/componentesColumna2/MainLateralPostTarjetas.jsx" -> "componentes/residente/componentes/componentesColumna2/PortadaRevista.jsx"	[pos="e,2493.7,3921.6 1898.8,3790.4 2027.6,3818.8 2344.1,3888.6 2482.8,3919.2"];
+	"componentes/residente/componentes/DetallePostWrapper.jsx"	[height=0.32986,
+		pos="1841.8,3472",
+		width=5.3681];
+	"componentes/residente/componentes/DetallePostWrapper.jsx" -> "componentes/residente/componentes/DetallePost.jsx"	[pos="e,2382.7,3224.5 2035.5,3477 2101.1,3474.7 2164,3466.7 2188,3446 2242.3,3399.3 2172.2,3338.4 2224,3289 2263.3,3251.5 2318,3233.6 \
+2371.3,3226"];
+	"componentes/residente/componentes/DetallePostWrapper.jsx" -> "componentes/api/notasPublicadasGet.js"	[pos="e,3122.6,3665.7 1924.3,3484.3 2163,3520.5 2858.9,3625.8 3111.3,3664"];
+	"componentes/residente/componentes/PostComentarios.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,2634",
+		width=5.1493];
+	"componentes/residente/componentes/ResidenteHome.jsx"	[height=0.32986,
+		pos="1183,3838",
+		width=5.0556];
+	"componentes/residente/componentes/ResidenteHome.jsx" -> "componentes/api/url.js"	[pos="e,3639.3,2691.1 1249.3,3825.6 1308.6,3818 1396.3,3816 1459.5,3855 1486.6,3871.7 1469,3899.3 1495.5,3917 1751.8,4087.5 2569.7,4015.7 \
+2877.5,4012 2946.3,4011.2 3445.9,4043.5 3496.5,3997 3596,3905.5 3633.4,2872.4 3638.9,2702.5"];
+	"componentes/residente/componentes/ResidenteHome.jsx" -> "componentes/api/CatalogoSeccionesGet.js"	[pos="e,3067.1,2874.4 1266,3850.4 1327.8,3854.7 1410,3848.9 1459.5,3799 1544.8,3713 1406.5,3611.1 1495.5,3529 1552.1,3476.7 2125,3537.3 \
+2188,3493 2221.9,3469.1 2190.9,3431.9 2224,3407 2340.8,3319.1 2775.8,3436 2877.5,3331 2944.3,3261.9 2844.7,2967.1 2913.5,2900 2934.3,\
+2879.7 2995.1,2874.2 3055.8,2874.3"];
+	"componentes/residente/componentes/ResidenteHome.jsx" -> "componentes/api/notasPublicadasGet.js"	[pos="e,3075.7,3669.8 1365.3,3844.7 1776.6,3858.5 2754.8,3881.9 2877.5,3799 2909.8,3777.2 2882.3,3742.4 2913.5,3719 2956.2,3686.9 3012.6,\
+3674.3 3064.4,3670.5"];
+	"componentes/residente/componentes/ResidenteHome.jsx" -> "componentes/api/revistasGet.js"	[pos="e,3155.6,3727.6 1365.3,3840.6 1397,3843.4 1429.4,3848 1459.5,3855 1476.4,3858.9 1478.5,3866.6 1495.5,3870 1570.8,3885 2815.5,3915.3 \
+2877.5,3870 2920.1,3838.9 2871.9,3789.3 2913.5,3757 2979.2,3706 3080.5,3713.5 3144.5,3725.4"];
+	"componentes/residente/componentes/ResidenteHome.jsx" -> "componentes/residente/componentes/componentesColumna2/MainLateralPostTarjetas.jsx"	[pos="e,1661.5,3790.3 1289.2,3825.6 1349.5,3818.7 1426.7,3810.3 1495.5,3804 1545.6,3799.4 1599.8,3795 1650.1,3791.2"];
+	"componentes/residente/componentes/SeccionesPrincipales.jsx"	[height=0.32986,
+		pos="2550.8,4090",
+		width=5.4826];
+	"componentes/residente/componentes/ResidenteHome.jsx" -> "componentes/residente/componentes/SeccionesPrincipales.jsx"	[pos="e,2378.9,4102.3 1206.5,3850.2 1255.5,3877.3 1374.1,3946.2 1459.5,4022 1477.9,4038.3 1473.3,4053.4 1495.5,4064 1644.7,4134.9 2107.3,\
+4118.7 2367.4,4103"];
+	"componentes/residente/componentes/componentesColumna2/VideosHorizontal.jsx"	[height=0.32986,
+		pos="2550.8,3428",
+		width=7.1701];
+	"componentes/residente/componentes/ResidenteHome.jsx" -> "componentes/residente/componentes/componentesColumna2/VideosHorizontal.jsx"	[pos="e,2505.2,3440.3 1365.3,3831.3 1398,3824.9 1430.8,3814.7 1459.5,3799 1481.1,3787.2 1475,3770.5 1495.5,3757 1583,3699.4 2289.1,3500.4 \
+2494.1,3443.4"];
+	"componentes/residente/componentes/ResidenteHome.jsx" -> "componentes/residente/componentes/seccionesCategorias/componentes/BarraMarquee.jsx"	[pos="e,2348.4,3790.4 1365.4,3832 1566.5,3825.1 1900.5,3812.9 2188,3799 2236.2,3796.6 2288.1,3793.8 2337,3791"];
+	"componentes/residente/componentes/SeccionesPrincipales.jsx" -> "componentes/api/url.js"	[pos="e,3639.3,2691.3 2748.6,4080.6 3021.5,4067.2 3483.2,4042.8 3496.5,4030 3596.5,3934.1 3633.5,2875.8 3638.9,2702.8"];
+	"componentes/residente/componentes/SeccionesPrincipales.jsx" -> "componentes/api/CatalogoSeccionesGet.js"	[pos="e,3067,2876.2 2650.7,4077.6 2726.4,4062.5 2826.2,4028.9 2877.5,3955 2941.7,3862.5 2840.7,3027.9 2913.5,2942 2948.3,2900.9 3003.1,\
+2883.6 3055.8,2877.4"];
+	"componentes/residente/componentes/SeccionesPrincipales.jsx" -> "componentes/api/notasCategoriasBuscador.js"	[pos="e,3059.1,4093.1 2748.3,4091.2 2844.2,4091.8 2957.9,4092.5 3047.7,4093"];
+	"componentes/residente/componentes/componentesColumna2/VideosHorizontal.jsx" -> "componentes/Context.jsx"	[pos="e,3120.7,2066.2 2728.4,3415.7 2784.8,3402.4 2841.8,3377.4 2877.5,3331 2961.4,3221.9 2818.3,2192.4 2913.5,2093 2939.7,2065.6 3035,\
+2063.1 3109.4,2065.7"];
+	"componentes/residente/componentes/componentesColumna2/VideosHorizontal.jsx" -> "componentes/api/url.js"	[pos="e,3639.1,2691.3 2684.2,3440.3 2915.1,3458.9 3378.2,3481.7 3496.5,3380 3602.7,3288.7 3632.9,2814.1 3638.5,2702.5"];
+	"componentes/residente/componentes/componentesColumna2/VideosHorizontal.jsx" -> "componentes/api/videosApi.js"	[pos="e,3119.6,3371.3 2727.3,3415.6 2776,3411.8 2828.8,3407.1 2877.5,3402 2955.4,3393.7 3043.5,3382 3108.5,3372.9"];
+	"componentes/residente/componentes/ShowComentarios.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,2784",
+		width=5.2431];
+	"componentes/residente/componentes/compFormularioMain/FiltroTipoCliente.jsx" -> "hooks/useClientesValidos.js"	[pos="e,2510.3,810.35 1882.8,1563.3 1954.9,1582.8 2106.7,1610.6 2188,1530 2270.4,1448.3 2165.1,1109 2224,1009 2286.4,903.17 2425.1,841.06 \
+2499.8,814.07"];
+	"componentes/residente/componentes/compFormularioMain/FiltroTipoCliente.jsx" -> "componentes/api/CatalogoSeccionesGet.js"	[pos="e,3066.8,2888.9 1853.9,1563 1903.1,1617 2102.5,1843.7 2188,2070 2229.7,2180.3 2154,2238.1 2224,2333 2414.2,2590.7 2684.4,2381.4 \
+2877.5,2637 2938.5,2717.8 2838.9,2793.5 2913.5,2862 2934.9,2881.6 2995.3,2887.8 3055.6,2888.8"];
+	"componentes/residente/componentes/compFormularioMain/componentes/Autor.jsx" -> "componentes/Context.jsx"	[pos="e,3120.4,2067.4 2809,2271.3 2839.6,2267.1 2864.5,2260 2877.5,2249 2931.7,2202.9 2859.4,2139.3 2913.5,2093 2942.1,2068.5 3036,2065.4 \
+3109.3,2067.1"];
+	"componentes/residente/componentes/compFormularioMain/componentes/CategoriasTipoNotaSelector.jsx" -> "componentes/Context.jsx"	[pos="e,3120.5,2067.9 2862,2215.6 2868.1,2213.1 2873.4,2210.2 2877.5,2207 2919.3,2174.2 2871.8,2125.9 2913.5,2093 2943,2069.7 3036.4,2066.4 \
+3109.5,2067.7"];
+	"componentes/residente/componentes/compFormularioMain/componentes/Contenido.jsx" -> "componentes/api/url.js"	[pos="e,3638.2,2691.1 3267.4,3017.3 3330.6,3026.5 3429,3030.4 3496.5,2984 3595.3,2916.1 3627.6,2761.4 3636.6,2702.4"];
+	"componentes/residente/componentes/compFormularioMain/componentes/ImagenNotaSelector.jsx" -> "componentes/api/notaImagenDelete.js"	[pos="e,3080.9,2762.1 2850.7,2771.6 2927.3,2768.4 3006,2765.2 3069.6,2762.5"];
+	"componentes/residente/componentes/compFormularioMain/componentes/InstafotoSelector.jsx" -> "componentes/api/notaCrearPostPut.js"	[pos="e,3082.8,2797.2 2815.5,2851.7 2836.7,2848 2857.6,2843.5 2877.5,2838 2894.7,2833.2 2896.2,2824.7 2913.5,2820 2964,2806.1 3021.3,2800 \
+3071.5,2797.7"];
+	"componentes/residente/componentes/compFormularioMain/componentes/OpcionesPublicacion.jsx" -> "componentes/Context.jsx"	[pos="e,3120.5,2066.4 2855,2645.7 2864.5,2641.9 2872.2,2637.3 2877.5,2632 2961.8,2546.6 2828.8,2178.1 2913.5,2093 2940.2,2066.1 3035.1,\
+2063.5 3109.3,2066"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotasUsuarios.jsx" -> "hooks/useClientesValidos.js"	[pos="e,2459,802.35 2100,819.62 2220.4,813.83 2356.9,807.26 2447.7,802.9"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotasUsuarios.jsx" -> "componentes/Context.jsx"	[pos="e,3120.7,2077.8 1912.8,844.31 1989.1,857.35 2114.9,877.7 2224,889.99 2296.3,898.13 2827.1,885.46 2877.5,937.99 2963.2,1027.3 2827.8,\
+1961.8 2913.5,2051 2939.8,2078.3 3035.1,2080.8 3109.4,2078.2"];
+	"componentes/residente/componentes/compFormularioMain/ListaNotasUsuarios.jsx" -> "componentes/api/url.js"	[pos="e,3639.7,2666.9 2100.2,832.27 2139.4,827.65 2172.1,819.54 2188,805.99 2240.5,761.23 2169.9,697.74 2224,654.99 2279.5,611.15 3446.6,\
+651.88 3496.5,701.99 3641.6,847.56 3640.5,2442.7 3639.7,2655.6"];
+	"componentes/residente/componentes/compFormularioMain/SearchNotas.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,2880",
+		width=6.6285];
+	"componentes/residente/componentes/compFormularioMain/componentes/Imagen.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,2949",
+		width=7.3681];
+	"componentes/residente/componentes/compFormularioMain/componentesMuestraNotas/PostPrincipal.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,3005",
+		width=9.0035];
+	"componentes/residente/componentes/compFormularioMain/componentesPrincipales/ResidenteHome.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,3054",
+		width=9.0035];
+	"componentes/residente/componentes/componentesColumna1/BotonesAnunciateSuscribirme.jsx"	[height=0.32986,
+		pos="2550.8,1072",
+		width=8.2743];
+	"componentes/residente/componentes/componentesColumna1/BotonesAnunciateSuscribirme.jsx" -> "componentes/api/url.js"	[pos="e,3638.1,2666.8 2811.7,1084.2 2836.7,1095 2859.4,1110.1 2877.5,1131 2950.6,1215.4 2835.4,2055.2 2913.5,2135 3004.3,2227.7 3395.4,\
+2086.7 3496.5,2168 3575.5,2231.5 3624.5,2563.7 3636.6,2655.5"];
+	"componentes/residente/componentes/componentesColumna1/BotonesAnunciateSuscribirme.jsx" -> "componentes/api/bannerNewsletterGet.js"	[pos="e,3131.5,957.64 2615.7,1084.4 2685.4,1094.3 2797.7,1099.7 2877.5,1051 2904.1,1034.8 2887,1007.3 2913.5,990.99 2975.1,953.09 3058.6,\
+951 3120.3,956.52"];
+	"componentes/residente/componentes/componentesColumna1/Infografia.jsx"	[height=0.32986,
+		pos="2550.8,351.99",
+		width=6.5347];
+	"componentes/residente/componentes/componentesColumna1/Infografia.jsx" -> "componentes/api/url.js"	[pos="e,3639.3,2666.8 2613.7,339.62 2683.4,329.19 2797.3,322.95 2877.5,372.99 2904.9,390.06 2886.1,418.9 2913.5,435.99 3023.6,504.77 3404.7,\
+382.17 3496.5,473.99 3577.9,555.4 3632.5,2423.5 3639,2655.4"];
+	"componentes/residente/componentes/componentesColumna1/Infografia.jsx" -> "componentes/api/infografiaApi.js"	[pos="e,3098.7,418.77 2786.3,354 2817.4,358.07 2848.5,364.14 2877.5,372.99 2895.2,378.39 2895.8,388.51 2913.5,393.99 2969.1,411.19 3033.4,\
+417.17 3087.3,418.54"];
+	"componentes/residente/componentes/componentesColumna1/MiniaturasVideos.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,3099",
+		width=7.2014];
+	"componentes/residente/componentes/componentesColumna2/CarruselDescuentos.jsx"	[height=0.32986,
+		pos="2550.8,393.99",
+		width=7.4514];
+	"componentes/residente/componentes/seccionesCategorias/componentes/TicketPromoMini.jsx"	[height=0.32986,
+		pos="3205,494.99",
+		width=8.0972];
+	"componentes/residente/componentes/componentesColumna2/CarruselDescuentos.jsx" -> "componentes/residente/componentes/seccionesCategorias/componentes/TicketPromoMini.jsx"	[pos="e,2942.5,482.68 2644.7,381.63 2713.3,377.01 2806.6,380.49 2877.5,419.99 2901.1,433.14 2890,455.72 2913.5,468.99 2919.6,472.41 2925.8,\
+475.55 2932.3,478.41"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/TicketPromoMini.jsx" -> "componentes/api/url.js"	[pos="e,3639.3,2666.8 3253.7,482.63 3318.6,469.03 3433.8,456.8 3496.5,520.99 3575.2,601.54 3632.1,2427.2 3638.9,2655.6"];
+	"componentes/residente/componentes/componentesColumna2/CarruselPosts.jsx" -> "componentes/api/url.js"	[pos="e,3638.3,2666.9 2091.6,2343.8 2539.1,2340.9 3438.7,2339.6 3496.5,2377 3596.4,2441.5 3628.1,2596.3 3636.7,2655.5"];
+	"componentes/residente/componentes/componentesColumna2/Colaboradores.jsx"	[height=0.32986,
+		pos="1183,4526",
+		width=6.9826];
+	"componentes/residente/componentes/componentesColumna2/Colaboradores.jsx" -> "componentes/api/url.js"	[pos="e,3639.6,2691.1 1434.8,4531.6 2018.3,4543.6 3422.8,4564.9 3496.5,4495 3633.1,4365.4 3639.4,2905.4 3639.6,2702.4"];
+	"componentes/residente/componentes/componentesColumna2/Colaboradores.jsx" -> "componentes/api/temaSemanaApi.js"	[pos="e,1722.3,4493.2 1386.9,4513.6 1492.5,4507.2 1618.5,4499.5 1710.9,4493.9"];
+	"componentes/residente/componentes/componentesColumna2/DirectorioVertical.jsx"	[height=0.32986,
+		pos="2550.8,2742",
+		width=7.1701];
+	"componentes/residente/componentes/componentesColumna2/DirectorioVertical.jsx" -> "componentes/api/url.js"	[pos="e,3569.6,2691.3 2809.2,2738.4 2999.4,2733.9 3264.6,2723.8 3496.5,2701 3516.6,2699 3538.1,2696.1 3558.2,2693.1"];
+	"componentes/residente/componentes/componentesColumna2/DirectorioVertical.jsx" -> "componentes/api/CatalogoSeccionesGet.js"	[pos="e,3148.9,2895.4 2809,2742.2 2839.2,2746.3 2864,2752.9 2877.5,2763 2915,2791.1 2876.1,2833.8 2913.5,2862 2977.5,2910.4 3073.8,2906.8 \
+3137.8,2897.2"];
+	"componentes/residente/componentes/componentesColumna2/PortadaRevista.jsx" -> "componentes/DataContext.jsx"	[pos="e,3130,4199.6 2602.7,3946.4 2670.6,3964.7 2792,4004 2877.5,4069 2898.2,4084.7 2892.3,4100 2913.5,4115 2975.1,4158.4 3057.5,4183.5 \
+3118.8,4197.2"];
+	"componentes/residente/componentes/componentesColumna2/PortadaRevista.jsx" -> "componentes/api/url.js"	[pos="e,3639.9,2691.1 2804.3,3926.7 2829.4,3922.2 2854.2,3916.1 2877.5,3908 2895.7,3901.7 2895.8,3891.4 2913.5,3884 3157.6,3781.4 3316.5,\
+3955.3 3496.5,3761 3645.6,3600.1 3642.1,2845.3 3640,2702.4"];
+	"componentes/residente/componentes/componentesColumna2/PortadaRevista.jsx" -> "componentes/api/notasPublicadasGet.js"	[pos="e,3097.7,3665.6 2786.3,3921.7 2820.1,3910.9 2852,3894.4 2877.5,3870 2927.3,3822.2 2862.5,3765.4 2913.5,3719 2959.5,3677.1 3027.7,\
+3665.9 3086.5,3665.5"];
+	"componentes/residente/componentes/componentesColumna2/PortadaRevista.jsx" -> "componentes/api/revistasGet.js"	[pos="e,3101.8,3748.2 2612,3946.3 2682.5,3957.2 2799.5,3963.7 2877.5,3908 2910.2,3884.6 2883.4,3851.6 2913.5,3825 2962.3,3781.9 3031.8,\
+3760.7 3090.6,3750.1"];
+	"componentes/residente/componentes/componentesColumna2/TarjetaHorizontalPost.jsx" -> "componentes/api/url.js"	[pos="e,3564.5,2674.5 2113.5,2604.2 2322.3,2612.4 2618.2,2624.5 2877.5,2637 3122.7,2648.8 3412.1,2665.5 3553.3,2673.8"];
+	"componentes/residente/componentes/componentesColumna2/TarjetaVerticalPost.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,3143",
+		width=7.3056];
+	"componentes/residente/componentes/seccionesCategorias/componentes/CateogoriaHeader.jsx" -> "componentes/residente/componentes/componentesColumna2/DirectorioVertical.jsx"	[pos="e,2292.4,2736.2 2137.5,2732.7 2185.1,2733.7 2234.2,2734.8 2281.1,2735.9"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/CuponesCarrusel.jsx" -> "componentes/promociones/componentes/TicketPromo.jsx"	[pos="e,3022,620.43 2625.3,503.65 2694.8,495.76 2799.7,493.9 2877.5,536.99 2901.5,550.25 2889.7,573.43 2913.5,586.99 2943,603.78 2976.9,\
+613.57 3011,618.87"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/CuponesCarrusel.jsx" -> "componentes/utils/Iconografia.jsx"	[pos="e,3532.2,157.34 2844,511.68 2858.6,507.47 2870.2,502 2877.5,494.99 2932.3,442.38 2857,205.8 2913.5,154.99 3009.8,68.334 3367.1,148.67 \
+3496.5,154.99 3504.5,155.38 3512.7,155.89 3521,156.48"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/HeaderSecciones.jsx" -> "componentes/api/url.js"	[pos="e,3564.5,2680.4 2844.7,2694.3 3082.2,2689.7 3401.5,2683.6 3553,2680.7"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/HeaderSecciones.jsx" -> "componentes/api/CatalogoSeccionesGet.js"	[pos="e,3154.2,2895.3 2844.8,2706 2858.7,2709.9 2870,2714.8 2877.5,2721 2927.3,2762.3 2863.9,2820.5 2913.5,2862 2977.1,2915.2 3078.3,2908.8 \
+3143,2897.4"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/ImagenesRestaurantesDestacados.jsx" -> "componentes/api/url.js"	[pos="e,3606.9,2666.7 2056,2522.3 2099.7,2525 2145.3,2528 2188,2531 2770,2571.8 2923.5,2525.5 3496.5,2635 3530.7,2641.5 3568.2,2653.2 \
+3596.2,2662.9"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/BarraStickerMarquee.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,3186",
+		width=8.4618];
+	"componentes/residente/componentes/seccionesCategorias/componentes/CincoInfografiasRRR.jsx"	[height=0.32986,
+		pos="2550.8,3736",
+		width=8.441];
+	"componentes/residente/componentes/seccionesCategorias/componentes/CincoInfografiasRRR.jsx" -> "componentes/api/url.js"	[pos="e,3636.2,2691.1 2575.4,3723.8 2638,3690.2 2808.3,3588.8 2877.5,3449 2927.6,3347.8 2833.4,3021.6 2913.5,2942 3005.6,2850.4 3384.8,\
+2970.1 3496.5,2904 3574.9,2857.5 3617.4,2749.5 3632.8,2702"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/CincoInfografiasRRR.jsx" -> "componentes/api/infografiasGet.js"	[pos="e,3191.4,3963.8 2848.3,3748.3 2858.2,3750.9 2868,3753.7 2877.5,3757 3007.4,3801.1 3134.6,3911 3183.2,3956.1"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/Cupones.jsx"	[height=0.32986,
+		pos="2550.8,557.99",
+		width=7.4306];
+	"componentes/residente/componentes/seccionesCategorias/componentes/Cupones.jsx" -> "componentes/api/cuponesGet.js"	[pos="e,3099.7,1099.5 2720.8,570.3 2778.9,583.29 2839,608.15 2877.5,654.99 2931.1,720.16 2857.1,970.26 2913.5,1033 2956.8,1081.1 3027.6,\
+1096.2 3088.4,1099.1"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/Cupones.jsx" -> "componentes/promociones/componentes/TicketPromo.jsx"	[pos="e,3067.8,600.62 2710,570.33 2763.2,574.56 2822.9,579.39 2877.5,583.99 2936,588.92 3000.3,594.58 3056.4,599.59"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/Cupones.jsx" -> "componentes/utils/Iconografia.jsx"	[pos="e,3532.3,164.15 2818.4,559.4 2845,554.86 2866.3,547.74 2877.5,536.99 2933.7,482.92 2856.3,240.97 2913.5,187.99 2956.9,147.82 3326.3,\
+156.3 3520.8,163.71"];
+	"componentes/residente/componentes/seccionesCategorias/componentes/RecomendacionesRestaurantes.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,3228",
+		width=9.3576];
+	"componentes/residente/paginaCliente/componentes/BarrioAntiguoGifs.jsx"	[height=0.32986,
+		pos="3205,4330",
+		width=6.3785];
+	"componentes/residente/paginaCliente/componentes/BarrioAntiguoGifs.jsx" -> "componentes/api/url.js"	[pos="e,3639.5,2691.1 3254.4,4342.3 3319.2,4355.6 3433.3,4367.2 3496.5,4304 3615.1,4185.2 3636.8,2893 3639.3,2702.4"];
+	"componentes/residente/paginaCliente/componentes/Carrusel.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,3270",
+		width=5.6076];
+	"componentes/residente/paginaCliente/componentes/TarjetasHorizontal.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,3312",
+		width=6.3993];
+	"hooks/useApiCache.js"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,3354",
+		width=2.0764];
+	"iconos/SocialMedia.css"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="790.12,3438",
+		width=2.1806];
+	"iconos/SocialMediaIcons.jsx"	[height=0.32986,
+		pos="336.88,3396",
+		width=2.5764];
+	"iconos/SocialMediaIcons.jsx" -> "iconos/SocialMedia.css"	[pos="e,728.85,3425.6 430.09,3398.8 497.73,3401.6 591.68,3407 673.75,3417 688.08,3418.7 703.33,3421.1 717.88,3423.7"];
+	"iconos/svg/didi food.svg"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="790.12,3396",
+		width=2.2118];
+	"iconos/SocialMediaIcons.jsx" -> "iconos/svg/didi food.svg"	[pos="e,710.3,3396 430.01,3396 508.63,3396 621.02,3396 699.04,3396"];
+	"iconos/svg/rappi.avif"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="790.12,3354",
+		width=1.9201];
+	"iconos/SocialMediaIcons.jsx" -> "iconos/svg/rappi.avif"	[pos="e,728.85,3366.3 430.09,3393.1 497.73,3390.3 591.68,3385 673.75,3375 688.08,3373.2 703.33,3370.8 717.88,3368.3"];
+	"iconos/svg/ubereats.svg"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="790.12,3312",
+		width=2.2326];
+	"iconos/SocialMediaIcons.jsx" -> "iconos/svg/ubereats.svg"	[pos="e,727.32,3324.3 423.31,3408.3 494.16,3414.6 595.57,3413.9 673.75,3375 695.75,3364 688.93,3346.1 709.75,3333 712.04,3331.5 714.43,\
+3330.2 716.89,3329"];
+	"iconos/StarIcon.jsx"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,3438",
+		width=1.7951];
+	"index.css"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="790.12,911.99",
+		width=1.0035];
+	"main.jsx"	[height=0.32986,
+		pos="336.88,951.99",
+		width=0.92014];
+	"main.jsx" -> "App.jsx"	[pos="e,788.98,3257.8 370.3,941.88 437.62,923.15 592.97,891.97 673.75,973.99 757.93,1059.5 785.76,3009.9 788.83,3246.6"];
+	"main.jsx" -> "componentes/Context.jsx"	[pos="e,3120.7,2077.8 370.47,951.99 483.02,951.99 865.82,951.99 1182,951.99 1182,951.99 1182,951.99 1842.8,951.99 1957.9,951.99 2796.9,\
+926.74 2877.5,1009 2958.6,1091.7 2833.1,1967.5 2913.5,2051 2939.8,2078.3 3035.1,2080.8 3109.4,2078.2"];
+	"main.jsx" -> "index.css"	[pos="e,753.57,915.14 370.33,949.11 449.03,942.13 650.29,924.29 742.14,916.15"];
+	"utils/imageUtils.js"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,3480",
+		width=1.6806];
+	"utils/useAutoFitText.js"	[color="#cfffac",
+		fontcolor="#cfffac",
+		height=0.32986,
+		pos="336.88,3522",
+		width=2.0347];
+}

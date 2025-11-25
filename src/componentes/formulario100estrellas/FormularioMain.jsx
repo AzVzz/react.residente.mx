@@ -1,9 +1,10 @@
 import { useForm, FormProvider } from "react-hook-form";
+import { useParams, useNavigate } from "react-router-dom";
 import RestaurantPoster from "../api/RestaurantPoster";
-import RestaurantFetcher from "../api/RestaurantFetcher";
-import { useEffect } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import { useAuth } from "../Context";
 import Login from "../Login";
+import { useFormStorage } from "../../hooks/useFormStorage"; // Importar el hook
 
 import "./FormularioMain.css";
 import TipoRestaurante from "./componentes/TipoRestaurante";
@@ -27,6 +28,17 @@ import FotosLugar from "./componentes/FotosLugar";
 import Colaboraciones from "./componentes/Colaboraciones";
 import NuevasSeccionesCategorias from "./componentes/NuevasSeccionesCategorias";
 
+// Helper to get a stable ID for new forms across page reloads
+const getNewFormId = () => {
+  const NEW_FORM_ID_KEY = "newRestaurantFormId";
+  let formId = localStorage.getItem(NEW_FORM_ID_KEY); // CAMBIADO a localStorage
+  if (!formId) {
+    formId = `nuevo_${Date.now()}`;
+    localStorage.setItem(NEW_FORM_ID_KEY, formId); // CAMBIADO a localStorage
+  }
+  return formId;
+};
+
 // Definir campos de reseñas
 const reseñasFields = [
   "fundadores",
@@ -37,7 +49,19 @@ const reseñasFields = [
 ];
 
 const FormularioMain = ({ restaurante, esEdicion }) => {
+  const { idNegocio } = useParams();
+  const navigate = useNavigate();
+
+  // Usar useMemo para que el ID cambie si cambia el idNegocio (navegación)
+  const formId = useMemo(() => {
+    return idNegocio || getNewFormId();
+  }, [idNegocio]);
+
   const { usuario, token } = useAuth();
+  const { loadedData, saveFormData, removeFormData } = useFormStorage(
+    formId,
+    { disabled: false } // Habilitado siempre para auto-guardado
+  );
 
   // Si no hay token, muestra el login
   if (!token) {
@@ -128,7 +152,45 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
     baseDefaults.exp_op_empresa = "";
   }
 
-  const methods = useForm({ defaultValues: baseDefaults });
+  // Inicializar ocasiones ideales
+  if (
+    restaurante?.ocasiones_ideales &&
+    Array.isArray(restaurante.ocasiones_ideales)
+  ) {
+    restaurante.ocasiones_ideales.forEach((ocasion, index) => {
+      if (index < 3) {
+        baseDefaults[`ocasion_ideal_${index + 1}`] = ocasion;
+      }
+    });
+  }
+
+  const methods = useForm({ defaultValues: baseDefaults, mode: "onChange" });
+  const { watch, reset } = methods;
+
+  // Efecto para resetear el formulario cuando los datos del restaurante (props) cambian.
+  // Esto es crucial para el modo de edición, para poblar el form después de la carga asíncrona.
+  useEffect(() => {
+    if (restaurante) {
+      reset(baseDefaults);
+    }
+  }, [restaurante, reset]);
+
+  // Cargar datos desde el hook de storage cuando esté listo.
+  useEffect(() => {
+    // Solo resetear el form con datos locales si existen (no es un objeto vacío)
+    if (loadedData && Object.keys(loadedData).length > 0) {
+      // Esto sobreescribe los datos iniciales con los cambios locales guardados.
+      reset(loadedData);
+    }
+  }, [loadedData, reset]);
+
+  // Auto-guardado: Suscribirse a cambios en el formulario
+  useEffect(() => {
+    const subscription = watch((value) => {
+      saveFormData(value);
+    });
+    return () => subscription.unsubscribe();
+  }, [watch, saveFormData]);
 
   return (
     <div className="formulario">
@@ -155,10 +217,15 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
                 try {
                   const seccionesCategorias = Object.entries(
                     data.secciones_categorias || {}
-                  ).map(([seccion, categoria]) => ({
-                    seccion,
-                    categoria,
-                  }));
+                  ).flatMap(([seccion, valor]) => {
+                    if (Array.isArray(valor)) {
+                      // p.ej. Zona: ["Zona Tec", "Cumbres", ...]
+                      return valor.map((categoria) => ({ seccion, categoria }));
+                    }
+                    if (!valor) return [];
+                    // resto de secciones: string normal
+                    return [{ seccion, categoria: valor }];
+                  });
 
                   // Construir payload como objeto JavaScript
                   const payload = {
@@ -355,10 +422,26 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
                       await postImages(restaurantId, formData);
                     }
 
-                    //console.log("Proceso completo: datos e imágenes enviados");
+                    // *** ¡LÓGICA CLAVE AÑADIDA! ***
+                    // Limpiar el storage después de un envío exitoso.
+                    removeFormData();
+                    // Si era un formulario nuevo, limpiar también el ID de sesión.
+                    if (!esEdicion) {
+                      localStorage.removeItem("newRestaurantFormId"); // CAMBIADO a localStorage
+                    }
+                    console.log(
+                      "Proceso completo: Formulario enviado y borrador local eliminado."
+                    );
+
+                    // Redirigir a la página del restaurante
+                    const finalSlug =
+                      result.data.slug || (esEdicion ? restaurante.slug : null);
+                    if (finalSlug) {
+                      navigate(`/restaurante/${finalSlug}`);
+                    }
                   }
                 } catch (error) {
-                  //console.error('Error en el envío:', error);
+                  console.error("Error en el envío:", error);
                 }
               })}
             >
@@ -376,7 +459,6 @@ const FormularioMain = ({ restaurante, esEdicion }) => {
               <Sucursales />
               <CodigoVestir />
               <UbicacionPrincipal />{" "}
-
               {[1, 2, 3, 4, 5].map((num) => (
                 <Reconocimientos key={num} numero={num} />
               ))}

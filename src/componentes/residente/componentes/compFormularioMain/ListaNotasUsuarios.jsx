@@ -10,7 +10,7 @@ const ListaNotasUsuarios = () => {
   const { token, usuario } = useAuth();
   const { recargarClientes } = useClientesValidos();
   const [usuarios, setUsuarios] = useState([]);
-  
+
   // Obtener permisos únicos de los usuarios existentes
   const obtenerPermisosUnicos = () => {
     const permisos = usuarios.map(user => user.permisos).filter(Boolean);
@@ -23,12 +23,11 @@ const ListaNotasUsuarios = () => {
   // Función para formatear nombres de permisos
   const formatearPermiso = (permiso) => {
     const nombresPermisos = {
-      'usuario': 'Usuario General',
-      'todo': 'Administrador (Todo)',
+      'todos': 'Administrador (Todos)',
       'mama-de-rocco': 'Mamá de Rocco',
-      'barrio-antiguo': 'Barrio Antiguo'
+      'b2b': 'Usuario B2B'
     };
-    
+
     return nombresPermisos[permiso] || permiso.charAt(0).toUpperCase() + permiso.slice(1).replace(/-/g, ' ');
   };
   const [loading, setLoading] = useState(false);
@@ -44,8 +43,18 @@ const ListaNotasUsuarios = () => {
     nombre_usuario: '',
     password: '',
     confirmPassword: '',
-    permisos: 'usuario',
-    estado: 'activo'
+    permisos: 'todos',
+    rol: '',
+    estado: 'activo',
+    // Campos B2B (UI por ahora)
+    nombre_responsable: '',
+    email_responsable: '',
+    telefono_responsable: '',
+    nombre_comercial: '',
+    razon_social: '',
+    rfc: '',
+    direccion: '',
+    terminos: false
   });
 
   // Cargar usuarios al montar el componente
@@ -79,10 +88,31 @@ const ListaNotasUsuarios = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+
+    if (name === 'permisos') {
+      let nuevoRol = formData.rol;
+
+      if (value === 'todos') nuevoRol = 'residente';
+      else if (value === 'b2b') nuevoRol = 'b2b';
+      else if (value === 'mama-de-rocco') nuevoRol = 'colaborador';
+      else nuevoRol = 'invitado'; // Por defecto para nuevo cliente y otros clientes existentes
+
+      setFormData(prev => ({
+        ...prev,
+        permisos: value,
+        rol: nuevoRol
+      }));
+    } else if (name === 'terminos') {
+      setFormData(prev => ({
+        ...prev,
+        [name]: e.target.checked
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
   };
 
   const resetForm = () => {
@@ -90,8 +120,17 @@ const ListaNotasUsuarios = () => {
       nombre_usuario: '',
       password: '',
       confirmPassword: '',
-      permisos: 'usuario',
-      estado: 'activo'
+      permisos: 'todos',
+      rol: '',
+      estado: 'activo',
+      nombre_responsable: '',
+      email_responsable: '',
+      telefono_responsable: '',
+      nombre_comercial: '',
+      razon_social: '',
+      rfc: '',
+      direccion: '',
+      terminos: false
     });
     setPermisoPersonalizado('');
     setEditingUser(null);
@@ -124,11 +163,27 @@ const ListaNotasUsuarios = () => {
     }
 
     try {
-      const url = editingUser 
+      const url = editingUser
         ? `${urlApi}api/usuarios/${editingUser.id}`
         : `${urlApi}api/usuarios`;
-      
+
       const method = editingUser ? 'PUT' : 'POST';
+
+      // Lógica para evitar error de DB con B2B
+      // Si el rol es B2B, enviamos permiso 'b2b' (o lo que esté seleccionado)
+      let permisosEnvio = formData.permisos === 'nuevo-cliente' ? permisoPersonalizado : formData.permisos;
+
+      console.log('Enviando datos:', {
+        url,
+        method,
+        token: token ? 'Token presente' : 'Token faltante',
+        body: {
+          nombre_usuario: formData.nombre_usuario,
+          permisos: permisosEnvio,
+          rol: formData.rol,
+          restaurante_id: null
+        }
+      });
 
       const response = await fetch(url, {
         method,
@@ -139,8 +194,10 @@ const ListaNotasUsuarios = () => {
         body: JSON.stringify({
           nombre_usuario: formData.nombre_usuario,
           password: formData.password,
-          permisos: formData.permisos === 'nuevo-cliente' ? permisoPersonalizado : formData.permisos,
-          estado: formData.estado
+          permisos: permisosEnvio,
+          rol: formData.rol,
+          estado: formData.estado,
+          restaurante_id: null
         })
       });
 
@@ -160,28 +217,29 @@ const ListaNotasUsuarios = () => {
 
   const handleEdit = (user) => {
     setEditingUser(user);
-    
+
     // Si el permiso no está en las opciones predefinidas, usar "nuevo-cliente"
-    const permisosPredefinidos = ['usuario', 'todo', 'todos', 'mama-de-rocco', 'barrio-antiguo'];
+    const permisosPredefinidos = ['todos', 'mama-de-rocco', 'b2b'];
     const permisoSeleccionado = permisosPredefinidos.includes(user.permisos) || permisosExistentes.includes(user.permisos)
-      ? user.permisos 
+      ? user.permisos
       : 'nuevo-cliente';
-    
+
     setFormData({
       nombre_usuario: user.nombre_usuario,
       password: '',
       confirmPassword: '',
       permisos: permisoSeleccionado,
+      rol: user.rol || '',
       estado: user.estado || 'activo'
     });
-    
+
     // Si es un permiso personalizado, ponerlo en el campo de texto
     if (permisoSeleccionado === 'nuevo-cliente') {
       setPermisoPersonalizado(user.permisos);
     } else {
       setPermisoPersonalizado('');
     }
-    
+
     setShowRegistro(true);
   };
 
@@ -235,6 +293,16 @@ const ListaNotasUsuarios = () => {
     }
   };
 
+  //const encabezadoTablaUsuarios = {
+  //  "Usuario", 
+  //  "Cliente",
+  //  "Rol",
+  //  "Estado",
+  //  "Fecha Creación",
+  //  "Página Cliente",
+  //  "Acciones"
+  //}
+
   return (
     <div className="p-6">
       <div className="flex justify-between items-center mb-6">
@@ -264,7 +332,7 @@ const ListaNotasUsuarios = () => {
           <h3 className="text-lg font-semibold mb-4">
             {editingUser ? 'Editar Usuario' : 'Registrar Nuevo Cliente'}
           </h3>
-          
+
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -292,22 +360,20 @@ const ListaNotasUsuarios = () => {
                     onChange={handleInputChange}
                     className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
-                    <option value="usuario">Usuario General</option>
-                    <option value="todo">Administrador (Todo)</option>
                     <option value="todos">Administrador (Todos)</option>
                     <option value="mama-de-rocco">Mamá de Rocco</option>
-                    <option value="barrio-antiguo">Barrio Antiguo</option>
-                    
+                    <option value="b2b">Usuario B2B</option>
+
                     {/* Mostrar permisos existentes que no están en las opciones predefinidas */}
                     {permisosExistentes
-                      .filter(permiso => !['usuario', 'todo', 'todos', 'mama-de-rocco', 'barrio-antiguo'].includes(permiso))
+                      .filter(permiso => !['todos', 'mama-de-rocco', 'b2b'].includes(permiso))
                       .map(permiso => (
                         <option key={permiso} value={permiso}>
                           {formatearPermiso(permiso)}
                         </option>
                       ))
                     }
-                    
+
                     <option value="nuevo-cliente">+ Nuevo Cliente</option>
                   </select>
                   {formData.permisos === 'nuevo-cliente' && (
@@ -364,6 +430,25 @@ const ListaNotasUsuarios = () => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Rol
+                </label>
+                <select
+                  name="rol"
+                  value={formData.rol}
+                  onChange={handleInputChange}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 cursor-not-allowed"
+                  disabled
+                >
+                  <option value="">Seleccionar Rol</option>
+                  <option value="residente">Residente</option>
+                  <option value="colaborador">Colaborador</option>
+                  <option value="invitado">Invitado</option>
+                  <option value="b2b">B2B</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
                   Estado
                 </label>
                 <select
@@ -377,6 +462,123 @@ const ListaNotasUsuarios = () => {
                 </select>
               </div>
             </div>
+
+            {/* Campos adicionales para B2B */}
+            {formData.rol === 'b2b' && (
+              <div className="mb-6 border-t pt-4">
+                <h4 className="text-md font-bold text-gray-700 mb-4">Información del Negocio (B2B)</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Nombre del Responsable
+                    </label>
+                    <input
+                      type="text"
+                      name="nombre_responsable"
+                      value={formData.nombre_responsable}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Correo Electrónico del Responsable
+                    </label>
+                    <input
+                      type="email"
+                      name="email_responsable"
+                      value={formData.email_responsable}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Número de Teléfono
+                    </label>
+                    <input
+                      type="tel"
+                      name="telefono_responsable"
+                      value={formData.telefono_responsable}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Nombre Comercial
+                    </label>
+                    <input
+                      type="text"
+                      name="nombre_comercial"
+                      value={formData.nombre_comercial}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Razón Social
+                    </label>
+                    <input
+                      type="text"
+                      name="razon_social"
+                      value={formData.razon_social}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      RFC
+                    </label>
+                    <input
+                      type="text"
+                      name="rfc"
+                      value={formData.rfc}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Dirección Completa
+                    </label>
+                    <textarea
+                      name="direccion"
+                      value={formData.direccion}
+                      onChange={handleInputChange}
+                      rows="2"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+
+                  {/* Apartado de Tarjeta (Placeholder) */}
+                  <div className="md:col-span-2 bg-gray-50 p-4 rounded border border-gray-200">
+                    <h5 className="text-sm font-bold text-gray-700 mb-2">Método de Pago (Tarjeta de Crédito/Débito)</h5>
+                    <div className="flex items-center justify-center h-20 border-2 border-dashed border-gray-300 rounded text-gray-400">
+                      [Aquí irá el componente de pasarela de pago]
+                    </div>
+                  </div>
+
+                  {/* Términos y Condiciones */}
+                  <div className="md:col-span-2">
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        name="terminos"
+                        checked={formData.terminos}
+                        onChange={handleInputChange}
+                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                      />
+                      <label className="ml-2 block text-sm text-gray-900">
+                        Acepto los <a href="#" className="text-blue-600 hover:underline">términos y condiciones de uso</a>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
 
             <div className="flex justify-end space-x-2">
               <button
@@ -416,6 +618,9 @@ const ListaNotasUsuarios = () => {
                     Cliente
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Rol
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Estado
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -450,30 +655,34 @@ const ListaNotasUsuarios = () => {
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                          user.permisos === 'todo' || user.permisos === 'todos'
+                        <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${user.rol === 'b2b'
+                          ? 'bg-indigo-100 text-indigo-800'
+                          : user.permisos === 'todo' || user.permisos === 'todos'
                             ? 'bg-red-100 text-red-800'
                             : user.permisos === 'usuario'
-                            ? 'bg-green-100 text-green-800'
-                            : user.permisos === 'mama-de-rocco'
-                            ? 'bg-purple-100 text-purple-800'
-                            : user.permisos === 'barrio-antiguo'
-                            ? 'bg-orange-100 text-orange-800'
-                            : 'bg-blue-100 text-blue-800'
-                        }`}>
-                          {user.permisos === 'mama-de-rocco' ? 'Mamá de Rocco' :
-                           user.permisos === 'barrio-antiguo' ? 'Barrio Antiguo' :
-                           user.permisos === 'todo' || user.permisos === 'todos' ? 'Administrador' :
-                           user.permisos === 'usuario' ? 'Usuario General' :
-                           user.permisos || 'usuario'}
+                              ? 'bg-green-100 text-green-800'
+                              : user.permisos === 'mama-de-rocco'
+                                ? 'bg-purple-100 text-purple-800'
+                                : 'bg-blue-100 text-blue-800'
+                          }`}>
+                          {user.rol === 'b2b' ? 'Usuario B2B' :
+                            user.permisos === 'mama-de-rocco' ? 'Mamá de Rocco' :
+                              user.permisos === 'todo' || user.permisos === 'todos' ? 'Administrador' :
+                                user.permisos || 'usuario'}
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                          user.estado === 'activo'
-                            ? 'bg-green-100 text-green-800'
-                            : 'bg-red-100 text-red-800'
-                        }`}>
+                        <span className="text-sm text-gray-900">
+                          {user.rol
+                            ? user.rol.charAt(0).toUpperCase() + user.rol.slice(1)
+                            : 'N/A'}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${user.estado === 'activo'
+                          ? 'bg-green-100 text-green-800'
+                          : 'bg-red-100 text-red-800'
+                          }`}>
                           {user.estado}
                         </span>
                       </td>
@@ -506,11 +715,10 @@ const ListaNotasUsuarios = () => {
                           </button>
                           <button
                             onClick={() => toggleUserStatus(user.id, user.estado)}
-                            className={`${
-                              user.estado === 'activo'
-                                ? 'text-red-600 hover:text-red-900 cursor-pointer'
-                                : 'text-green-600 hover:text-green-900'
-                            }`}
+                            className={`${user.estado === 'activo'
+                              ? 'text-red-600 hover:text-red-900 cursor-pointer'
+                              : 'text-green-600 hover:text-green-900'
+                              }`}
                             title={user.estado === 'activo' ? 'Desactivar' : 'Activar'}
                           >
                             {user.estado === 'activo' ? <FaTimes /> : <FaCheck />}
